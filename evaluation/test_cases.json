@@ -1,0 +1,304 @@
+[
+  {
+    "id": "clean_001",
+    "category": "clean_single_entity",
+    "text": "Please contact John Smith regarding the account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "John Smith",
+        "start": 15,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "id": "clean_002",
+    "category": "clean_single_entity",
+    "text": "You can reach me at priya.sharma@techcorp.com for any questions.",
+    "entities": [
+      {
+        "type": "EMAIL",
+        "text": "priya.sharma@techcorp.com",
+        "start": 20,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "id": "multi_001",
+    "category": "multiple_entities_same_sentence",
+    "text": "Rahul Verma's phone number is +91-98765-43210 and his email is rahul.v@company.in.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rahul Verma",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91-98765-43210",
+        "start": 30,
+        "end": 45
+      },
+      {
+        "type": "EMAIL",
+        "text": "rahul.v@company.in",
+        "start": 63,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "multi_002",
+    "category": "multiple_entities_same_sentence",
+    "text": "Dr. Anjali Mehta prescribed metformin for Rohan's type 2 diabetes at Apollo Hospital.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Anjali Mehta",
+        "start": 4,
+        "end": 16
+      },
+      {
+        "type": "PERSON",
+        "text": "Rohan",
+        "start": 42,
+        "end": 47
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "type 2 diabetes",
+        "start": 50,
+        "end": 65
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Apollo Hospital",
+        "start": 69,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "id": "code_001",
+    "category": "pii_in_code_block",
+    "text": "Here's my config:\napi_key = \"sk-ant-a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6\"\nemail = \"dev@startup.io\"",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ant-a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6",
+        "start": 29,
+        "end": 68
+      },
+      {
+        "type": "EMAIL",
+        "text": "dev@startup.io",
+        "start": 79,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "id": "code_002",
+    "category": "pii_in_code_block",
+    "text": "curl -H 'Authorization: Bearer AKIAIOSFODNN7EXAMPLE' https://api.internal.com/users?ip=192.168.1.45",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "AKIAIOSFODNN7EXAMPLE",
+        "start": 31,
+        "end": 51
+      },
+      {
+        "type": "IP_ADDRESS",
+        "text": "192.168.1.45",
+        "start": 87,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "id": "ambig_001",
+    "category": "ambiguous_names",
+    "text": "Grace decided to say grace before the meal with Will and Rose.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Grace",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "type": "PERSON",
+        "text": "Will",
+        "start": 48,
+        "end": 52
+      },
+      {
+        "type": "PERSON",
+        "text": "Rose",
+        "start": 57,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "id": "ambig_002",
+    "category": "ambiguous_names",
+    "text": "May will join the June project after March completes her review.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "May",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "PERSON",
+        "text": "March",
+        "start": 37,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "id": "structured_001",
+    "category": "structured_odd_formats",
+    "text": "Card number: 4111 1111 1111 1111, expiry 08/27, SSN 123 45 6789.",
+    "entities": [
+      {
+        "type": "CREDIT_CARD",
+        "text": "4111 1111 1111 1111",
+        "start": 13,
+        "end": 32
+      },
+      {
+        "type": "SSN",
+        "text": "123 45 6789",
+        "start": 52,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "id": "structured_002",
+    "category": "structured_odd_formats",
+    "text": "Call me at 98765 43210 or on my landline 040-2345-6789.",
+    "entities": [
+      {
+        "type": "PHONE_NUMBER",
+        "text": "98765 43210",
+        "start": 11,
+        "end": 22
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "040-2345-6789",
+        "start": 41,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "id": "india_001",
+    "category": "india_specific",
+    "text": "My PAN is ABCDE1234F and Aadhaar number is 1234 5678 9012.",
+    "entities": [
+      {
+        "type": "PAN_NUMBER",
+        "text": "ABCDE1234F",
+        "start": 10,
+        "end": 20
+      },
+      {
+        "type": "AADHAAR_LIKE",
+        "text": "1234 5678 9012",
+        "start": 43,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "id": "india_002",
+    "category": "india_specific",
+    "text": "Send the offer letter to Kavya Reddy at Flat 302, Prestige Towers, Hyderabad, and cc her manager Suresh.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Kavya Reddy",
+        "start": 25,
+        "end": 36
+      },
+      {
+        "type": "ADDRESS",
+        "text": "Flat 302, Prestige Towers, Hyderabad",
+        "start": 40,
+        "end": 76
+      },
+      {
+        "type": "PERSON",
+        "text": "Suresh",
+        "start": 97,
+        "end": 103
+      }
+    ]
+  },
+  {
+    "id": "negative_001",
+    "category": "no_pii_present",
+    "text": "The quarterly report shows a 12% increase in revenue compared to last year.",
+    "entities": []
+  },
+  {
+    "id": "negative_002",
+    "category": "no_pii_present",
+    "text": "Please summarize the key findings from the attached research paper on climate change.",
+    "entities": []
+  },
+  {
+    "id": "nested_001",
+    "category": "nested_adjacent_entities",
+    "text": "New hire Ananya Rao (ananya.rao@corp.com, +91-99887-76655) starts Monday, reporting to Vikram Singh.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Ananya Rao",
+        "start": 9,
+        "end": 19
+      },
+      {
+        "type": "EMAIL",
+        "text": "ananya.rao@corp.com",
+        "start": 21,
+        "end": 40
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91-99887-76655",
+        "start": 42,
+        "end": 57
+      },
+      {
+        "type": "PERSON",
+        "text": "Vikram Singh",
+        "start": 87,
+        "end": 99
+      }
+    ]
+  },
+  {
+    "id": "zero_shot_001",
+    "category": "project_codename",
+    "text": "Project Nightingale's launch has been delayed until the Q3 review with stakeholders.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Project Nightingale",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  }
+]

@@ -1,0 +1,3840 @@
+[
+  {
+    "id": "synth_999_0000",
+    "category": "synthetic",
+    "text": "Ticket #4521: Angela Brennan reported an issue, contact via dawn13@example.org.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Angela Brennan",
+        "start": 14,
+        "end": 28
+      },
+      {
+        "type": "EMAIL",
+        "text": "dawn13@example.org",
+        "start": 60,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0001",
+    "category": "synthetic",
+    "text": "Wendy Johnson and Patricia Carroll are co-leading the Burns, Thomas and Aguirre migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Wendy Johnson",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "PERSON",
+        "text": "Patricia Carroll",
+        "start": 18,
+        "end": 34
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Burns, Thomas and Aguirre",
+        "start": 54,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0002",
+    "category": "synthetic",
+    "text": "Patient Rebecca Vasquez was diagnosed with anemia on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rebecca Vasquez",
+        "start": 8,
+        "end": 23
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "anemia",
+        "start": 43,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0003",
+    "category": "synthetic",
+    "text": "The meeting notes mention Anderson-Long's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Anderson-Long",
+        "start": 26,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0004",
+    "category": "synthetic",
+    "text": "Emergency contact for Michelle Torres is William Davidson, reachable at 573-974-1234x2925.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Michelle Torres",
+        "start": 22,
+        "end": 37
+      },
+      {
+        "type": "PERSON",
+        "text": "William Davidson",
+        "start": 41,
+        "end": 57
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "573-974-1234x2925",
+        "start": 72,
+        "end": 89
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0005",
+    "category": "synthetic",
+    "text": "Server log: request from 222.14.139.92 authenticated as Tracy Wang.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "222.14.139.92",
+        "start": 25,
+        "end": 38
+      },
+      {
+        "type": "PERSON",
+        "text": "Tracy Wang",
+        "start": 56,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0006",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_999_0007",
+    "category": "synthetic",
+    "text": "For verification, Rhonda Watkins provided PAN HVLPQ0496M and phone 001-830-623-4401.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rhonda Watkins",
+        "start": 18,
+        "end": 32
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "HVLPQ0496M",
+        "start": 46,
+        "end": 56
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "001-830-623-4401",
+        "start": 67,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0008",
+    "category": "synthetic",
+    "text": "Patient Danielle Alexander was diagnosed with hypertension on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Danielle Alexander",
+        "start": 8,
+        "end": 26
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "hypertension",
+        "start": 46,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0009",
+    "category": "synthetic",
+    "text": "Ticket #4521: Vicki Nichols DDS reported an issue, contact via dennis15@example.org.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Vicki Nichols DDS",
+        "start": 14,
+        "end": 31
+      },
+      {
+        "type": "EMAIL",
+        "text": "dennis15@example.org",
+        "start": 63,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0010",
+    "category": "synthetic",
+    "text": "Shipping to 914 Benjamin Shoals Apt. 090, Turnerfort, CO 44898, attention Laura Thompson.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "914 Benjamin Shoals Apt. 090, Turnerfort, CO 44898",
+        "start": 12,
+        "end": 62
+      },
+      {
+        "type": "PERSON",
+        "text": "Laura Thompson",
+        "start": 74,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0011",
+    "category": "synthetic",
+    "text": "For verification, Benjamin Torres provided PAN UDQVK5274G and phone 700.834.9721.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Benjamin Torres",
+        "start": 18,
+        "end": 33
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "UDQVK5274G",
+        "start": 47,
+        "end": 57
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "700.834.9721",
+        "start": 68,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0012",
+    "category": "synthetic",
+    "text": "New employee Richard Espinoza will report to Rose Campbell starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Richard Espinoza",
+        "start": 13,
+        "end": 29
+      },
+      {
+        "type": "PERSON",
+        "text": "Rose Campbell",
+        "start": 45,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0013",
+    "category": "synthetic",
+    "text": "Ticket #4521: Brenda Collins reported an issue, contact via matthewsjasmine@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Brenda Collins",
+        "start": 14,
+        "end": 28
+      },
+      {
+        "type": "EMAIL",
+        "text": "matthewsjasmine@example.com",
+        "start": 60,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0014",
+    "category": "synthetic",
+    "text": "api_key = \"sk-ant-31bgsys1fu5jbrfykth93fdfv2umyji6\"  # do not commit this, Sandra Harris",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ant-31bgsys1fu5jbrfykth93fdfv2umyji6",
+        "start": 11,
+        "end": 50
+      },
+      {
+        "type": "PERSON",
+        "text": "Sandra Harris",
+        "start": 75,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0015",
+    "category": "synthetic",
+    "text": "The meeting notes mention Buck, Gibbs and Vargas's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Buck, Gibbs and Vargas",
+        "start": 26,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0016",
+    "category": "synthetic",
+    "text": "api_key = \"AKIAPZ46NBG6LXA2JQ14\"  # do not commit this, Lori Phillips",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "AKIAPZ46NBG6LXA2JQ14",
+        "start": 11,
+        "end": 31
+      },
+      {
+        "type": "PERSON",
+        "text": "Lori Phillips",
+        "start": 56,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0017",
+    "category": "synthetic",
+    "text": "api_key = \"sk-ant-k40bo4il6v3e8mdzind277zcqyz0kmh7\"  # do not commit this, Kara Rasmussen",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ant-k40bo4il6v3e8mdzind277zcqyz0kmh7",
+        "start": 11,
+        "end": 50
+      },
+      {
+        "type": "PERSON",
+        "text": "Kara Rasmussen",
+        "start": 75,
+        "end": 89
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0018",
+    "category": "synthetic",
+    "text": "Ticket #4521: Steven Ball reported an issue, contact via zwarner@example.org.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Steven Ball",
+        "start": 14,
+        "end": 25
+      },
+      {
+        "type": "EMAIL",
+        "text": "zwarner@example.org",
+        "start": 57,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0019",
+    "category": "synthetic",
+    "text": "Patient Kristen Davis was diagnosed with seasonal allergies on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Kristen Davis",
+        "start": 8,
+        "end": 21
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "seasonal allergies",
+        "start": 41,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0020",
+    "category": "synthetic",
+    "text": "Emergency contact for Dale Bowman is Ashley Smith, reachable at 339.935.7766x830.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Dale Bowman",
+        "start": 22,
+        "end": 33
+      },
+      {
+        "type": "PERSON",
+        "text": "Ashley Smith",
+        "start": 37,
+        "end": 49
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "339.935.7766x830",
+        "start": 64,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0021",
+    "category": "synthetic",
+    "text": "Earl Jackson and Eric Stone are co-leading the Owens-Grant migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Earl Jackson",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "PERSON",
+        "text": "Eric Stone",
+        "start": 17,
+        "end": 27
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Owens-Grant",
+        "start": 47,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0022",
+    "category": "synthetic",
+    "text": "Rachel Colon and Andrea Jacobson are co-leading the Anderson Ltd migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rachel Colon",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "PERSON",
+        "text": "Andrea Jacobson",
+        "start": 17,
+        "end": 32
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Anderson Ltd",
+        "start": 52,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0023",
+    "category": "synthetic",
+    "text": "Ticket #4521: Amber Rose reported an issue, contact via hansonkaitlyn@example.org.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Amber Rose",
+        "start": 14,
+        "end": 24
+      },
+      {
+        "type": "EMAIL",
+        "text": "hansonkaitlyn@example.org",
+        "start": 56,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0024",
+    "category": "synthetic",
+    "text": "Ryan Hartman's card ending in 6011488040755150 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Ryan Hartman",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "6011488040755150",
+        "start": 30,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0025",
+    "category": "synthetic",
+    "text": "Heather Stone called from 5163002550 regarding the Griffith, Morales and Juarez account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Heather Stone",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "5163002550",
+        "start": 26,
+        "end": 36
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Griffith, Morales and Juarez",
+        "start": 51,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0026",
+    "category": "synthetic",
+    "text": "Patient Charles Rodriguez was diagnosed with anemia on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Charles Rodriguez",
+        "start": 8,
+        "end": 25
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "anemia",
+        "start": 45,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0027",
+    "category": "synthetic",
+    "text": "Shipping to 7089 Hall Hills Suite 000, Meganmouth, MT 88230, attention Michelle Williams.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "7089 Hall Hills Suite 000, Meganmouth, MT 88230",
+        "start": 12,
+        "end": 59
+      },
+      {
+        "type": "PERSON",
+        "text": "Michelle Williams",
+        "start": 71,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0028",
+    "category": "synthetic",
+    "text": "Haley Welch called from 650.721.8681 regarding the Walker-Cole account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Haley Welch",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "650.721.8681",
+        "start": 24,
+        "end": 36
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Walker-Cole",
+        "start": 51,
+        "end": 62
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0029",
+    "category": "synthetic",
+    "text": "Ticket #4521: Dr. Laura Ward reported an issue, contact via rjacobson@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Dr. Laura Ward",
+        "start": 14,
+        "end": 28
+      },
+      {
+        "type": "EMAIL",
+        "text": "rjacobson@example.com",
+        "start": 60,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0030",
+    "category": "synthetic",
+    "text": "New employee Crystal Olson will report to Deborah Patterson starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Crystal Olson",
+        "start": 13,
+        "end": 26
+      },
+      {
+        "type": "PERSON",
+        "text": "Deborah Patterson",
+        "start": 42,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0031",
+    "category": "synthetic",
+    "text": "For verification, Samantha Jenkins provided PAN GLHQG3887J and phone 940.242.8459.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Samantha Jenkins",
+        "start": 18,
+        "end": 34
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "GLHQG3887J",
+        "start": 48,
+        "end": 58
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "940.242.8459",
+        "start": 69,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0032",
+    "category": "synthetic",
+    "text": "SSN on file: 669-07-1179, associated with applicant Shawn Cunningham DDS.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "669-07-1179",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Shawn Cunningham DDS",
+        "start": 52,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0033",
+    "category": "synthetic",
+    "text": "The meeting notes mention Jones PLC's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Jones PLC",
+        "start": 26,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0034",
+    "category": "synthetic",
+    "text": "Emergency contact for Erin Palmer is Candice Valenzuela, reachable at 001-379-232-4097.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Erin Palmer",
+        "start": 22,
+        "end": 33
+      },
+      {
+        "type": "PERSON",
+        "text": "Candice Valenzuela",
+        "start": 37,
+        "end": 55
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "001-379-232-4097",
+        "start": 70,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0035",
+    "category": "synthetic",
+    "text": "The meeting notes mention Hancock-White's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Hancock-White",
+        "start": 26,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0036",
+    "category": "synthetic",
+    "text": "Emergency contact for Deborah Lang is Patricia Jones, reachable at +1-391-548-9842x87971.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Deborah Lang",
+        "start": 22,
+        "end": 34
+      },
+      {
+        "type": "PERSON",
+        "text": "Patricia Jones",
+        "start": 38,
+        "end": 52
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+1-391-548-9842x87971",
+        "start": 67,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0037",
+    "category": "synthetic",
+    "text": "Server log: request from 79.226.200.42 authenticated as Christopher Hall.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "79.226.200.42",
+        "start": 25,
+        "end": 38
+      },
+      {
+        "type": "PERSON",
+        "text": "Christopher Hall",
+        "start": 56,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0038",
+    "category": "synthetic",
+    "text": "Server log: request from 49.5.206.200 authenticated as Matthew Lawrence.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "49.5.206.200",
+        "start": 25,
+        "end": 37
+      },
+      {
+        "type": "PERSON",
+        "text": "Matthew Lawrence",
+        "start": 55,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0039",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_999_0040",
+    "category": "synthetic",
+    "text": "Brian Knight called from 001-333-248-6071x041 regarding the Norris Ltd account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Brian Knight",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "001-333-248-6071x041",
+        "start": 25,
+        "end": 45
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Norris Ltd",
+        "start": 60,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0041",
+    "category": "synthetic",
+    "text": "Please reach out to Rhonda King at taylordaniels@example.net before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rhonda King",
+        "start": 20,
+        "end": 31
+      },
+      {
+        "type": "EMAIL",
+        "text": "taylordaniels@example.net",
+        "start": 35,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0042",
+    "category": "synthetic",
+    "text": "New employee George Barber will report to Leslie Chavez starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "George Barber",
+        "start": 13,
+        "end": 26
+      },
+      {
+        "type": "PERSON",
+        "text": "Leslie Chavez",
+        "start": 42,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0043",
+    "category": "synthetic",
+    "text": "For verification, Emily Lambert provided PAN ARIVT1489Q and phone (696)207-3053x4485.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Emily Lambert",
+        "start": 18,
+        "end": 31
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "ARIVT1489Q",
+        "start": 45,
+        "end": 55
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "(696)207-3053x4485",
+        "start": 66,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0044",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_999_0045",
+    "category": "synthetic",
+    "text": "Derek Dyer's card ending in 4053930793836 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Derek Dyer",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4053930793836",
+        "start": 28,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0046",
+    "category": "synthetic",
+    "text": "SSN on file: 473-47-1851, associated with applicant Billy Davis.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "473-47-1851",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Billy Davis",
+        "start": 52,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0047",
+    "category": "synthetic",
+    "text": "SSN on file: 028-57-4619, associated with applicant Terri Mckenzie.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "028-57-4619",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Terri Mckenzie",
+        "start": 52,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0048",
+    "category": "synthetic",
+    "text": "Lisa Nicholson called from 513-562-5205x759 regarding the Foster Ltd account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Lisa Nicholson",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "513-562-5205x759",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Foster Ltd",
+        "start": 58,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0049",
+    "category": "synthetic",
+    "text": "api_key = \"sk-81a2haqhhdj0zy8kdlrz3wch4z1pfbt0\"  # do not commit this, Pamela Hooper",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-81a2haqhhdj0zy8kdlrz3wch4z1pfbt0",
+        "start": 11,
+        "end": 46
+      },
+      {
+        "type": "PERSON",
+        "text": "Pamela Hooper",
+        "start": 71,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0050",
+    "category": "synthetic",
+    "text": "Please reach out to Taylor Buckley at gwelch@example.com before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Taylor Buckley",
+        "start": 20,
+        "end": 34
+      },
+      {
+        "type": "EMAIL",
+        "text": "gwelch@example.com",
+        "start": 38,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0051",
+    "category": "synthetic",
+    "text": "Jonathan Hayes and Cheyenne Charles are co-leading the Reynolds, Martin and Sanders migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jonathan Hayes",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "type": "PERSON",
+        "text": "Cheyenne Charles",
+        "start": 19,
+        "end": 35
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Reynolds, Martin and Sanders",
+        "start": 55,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0052",
+    "category": "synthetic",
+    "text": "Shipping to 881 Justin Fields Suite 454, South Rachel, RI 68713, attention Jennifer Delacruz.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "881 Justin Fields Suite 454, South Rachel, RI 68713",
+        "start": 12,
+        "end": 63
+      },
+      {
+        "type": "PERSON",
+        "text": "Jennifer Delacruz",
+        "start": 75,
+        "end": 92
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0053",
+    "category": "synthetic",
+    "text": "Brittany Mcguire and Luis Wilson are co-leading the Perez, Lopez and Carson migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Brittany Mcguire",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "type": "PERSON",
+        "text": "Luis Wilson",
+        "start": 21,
+        "end": 32
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Perez, Lopez and Carson",
+        "start": 52,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0054",
+    "category": "synthetic",
+    "text": "Shipping to 19382 Pamela Spring Apt. 831, East Danielle, NE 70392, attention Laura Walter.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "19382 Pamela Spring Apt. 831, East Danielle, NE 70392",
+        "start": 12,
+        "end": 65
+      },
+      {
+        "type": "PERSON",
+        "text": "Laura Walter",
+        "start": 77,
+        "end": 89
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0055",
+    "category": "synthetic",
+    "text": "api_key = \"AKIAHDOKKXJG5Y70ZYPT\"  # do not commit this, Rachael Wright",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "AKIAHDOKKXJG5Y70ZYPT",
+        "start": 11,
+        "end": 31
+      },
+      {
+        "type": "PERSON",
+        "text": "Rachael Wright",
+        "start": 56,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0056",
+    "category": "synthetic",
+    "text": "Stephanie May called from 846-424-7190x3011 regarding the Wilson, Wong and Murillo account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Stephanie May",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "846-424-7190x3011",
+        "start": 26,
+        "end": 43
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Wilson, Wong and Murillo",
+        "start": 58,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0057",
+    "category": "synthetic",
+    "text": "Kevin Young called from 362-320-2808 regarding the Cervantes-Hunt account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Kevin Young",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "362-320-2808",
+        "start": 24,
+        "end": 36
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Cervantes-Hunt",
+        "start": 51,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0058",
+    "category": "synthetic",
+    "text": "The meeting notes mention Rodriguez-Rodriguez's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Rodriguez-Rodriguez",
+        "start": 26,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0059",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_999_0060",
+    "category": "synthetic",
+    "text": "api_key = \"sk-ant-pzva74c1fddxaaws0uine82re8nfc91x\"  # do not commit this, Melissa Booth",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ant-pzva74c1fddxaaws0uine82re8nfc91x",
+        "start": 11,
+        "end": 50
+      },
+      {
+        "type": "PERSON",
+        "text": "Melissa Booth",
+        "start": 75,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0061",
+    "category": "synthetic",
+    "text": "Shipping to 0919 John Square, Rodriguezfurt, ME 03513, attention Michael Santos.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "0919 John Square, Rodriguezfurt, ME 03513",
+        "start": 12,
+        "end": 53
+      },
+      {
+        "type": "PERSON",
+        "text": "Michael Santos",
+        "start": 65,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0062",
+    "category": "synthetic",
+    "text": "Patient Jennifer Murphy was diagnosed with hypertension on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jennifer Murphy",
+        "start": 8,
+        "end": 23
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "hypertension",
+        "start": 43,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0063",
+    "category": "synthetic",
+    "text": "SSN on file: 173-77-2333, associated with applicant Christopher Fisher.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "173-77-2333",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Christopher Fisher",
+        "start": 52,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0064",
+    "category": "synthetic",
+    "text": "Ticket #4521: Anthony Lynn reported an issue, contact via angela81@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Anthony Lynn",
+        "start": 14,
+        "end": 26
+      },
+      {
+        "type": "EMAIL",
+        "text": "angela81@example.com",
+        "start": 58,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0065",
+    "category": "synthetic",
+    "text": "New employee Roy Ballard will report to Jessica Lopez starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Roy Ballard",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Jessica Lopez",
+        "start": 40,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0066",
+    "category": "synthetic",
+    "text": "The meeting notes mention Shaw-Coffey's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Shaw-Coffey",
+        "start": 26,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0067",
+    "category": "synthetic",
+    "text": "Server log: request from 24.131.41.72 authenticated as Kimberly Parrish.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "24.131.41.72",
+        "start": 25,
+        "end": 37
+      },
+      {
+        "type": "PERSON",
+        "text": "Kimberly Parrish",
+        "start": 55,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0068",
+    "category": "synthetic",
+    "text": "Christopher Wilkins and Jared Kane are co-leading the Harrison, George and Powell migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Christopher Wilkins",
+        "start": 0,
+        "end": 19
+      },
+      {
+        "type": "PERSON",
+        "text": "Jared Kane",
+        "start": 24,
+        "end": 34
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Harrison, George and Powell",
+        "start": 54,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0069",
+    "category": "synthetic",
+    "text": "Shipping to Unit 2850 Box 3634, DPO AP 48370, attention Lynn Martin.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "Unit 2850 Box 3634, DPO AP 48370",
+        "start": 12,
+        "end": 44
+      },
+      {
+        "type": "PERSON",
+        "text": "Lynn Martin",
+        "start": 56,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0070",
+    "category": "synthetic",
+    "text": "New employee Jonathan Jones will report to James Cobb starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jonathan Jones",
+        "start": 13,
+        "end": 27
+      },
+      {
+        "type": "PERSON",
+        "text": "James Cobb",
+        "start": 43,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0071",
+    "category": "synthetic",
+    "text": "Joshua Bowman called from 001-633-981-5793x9247 regarding the Smith Group account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Joshua Bowman",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "001-633-981-5793x9247",
+        "start": 26,
+        "end": 47
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Smith Group",
+        "start": 62,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0072",
+    "category": "synthetic",
+    "text": "Timothy Doyle's card ending in 4184924628983 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Timothy Doyle",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4184924628983",
+        "start": 31,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0073",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Initiative Falcon, led by Scott Long.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Initiative Falcon",
+        "start": 40,
+        "end": 57
+      },
+      {
+        "type": "PERSON",
+        "text": "Scott Long",
+        "start": 66,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0074",
+    "category": "synthetic",
+    "text": "Server log: request from 215.220.39.172 authenticated as Alexandria Davis.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "215.220.39.172",
+        "start": 25,
+        "end": 39
+      },
+      {
+        "type": "PERSON",
+        "text": "Alexandria Davis",
+        "start": 57,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0075",
+    "category": "synthetic",
+    "text": "Server log: request from 173.126.215.191 authenticated as Hailey Hernandez.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "173.126.215.191",
+        "start": 25,
+        "end": 40
+      },
+      {
+        "type": "PERSON",
+        "text": "Hailey Hernandez",
+        "start": 58,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0076",
+    "category": "synthetic",
+    "text": "New employee Kimberly Cross will report to Hayden Fritz starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Kimberly Cross",
+        "start": 13,
+        "end": 27
+      },
+      {
+        "type": "PERSON",
+        "text": "Hayden Fritz",
+        "start": 43,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0077",
+    "category": "synthetic",
+    "text": "Patient Nancy Rice was diagnosed with seasonal allergies on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Nancy Rice",
+        "start": 8,
+        "end": 18
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "seasonal allergies",
+        "start": 38,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0078",
+    "category": "synthetic",
+    "text": "Emergency contact for Mrs. Julie Hernandez is Dana Bradley, reachable at 001-254-966-5597x4568.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Mrs. Julie Hernandez",
+        "start": 22,
+        "end": 42
+      },
+      {
+        "type": "PERSON",
+        "text": "Dana Bradley",
+        "start": 46,
+        "end": 58
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "001-254-966-5597x4568",
+        "start": 73,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0079",
+    "category": "synthetic",
+    "text": "Server log: request from 191.177.243.183 authenticated as Eric Rogers.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "191.177.243.183",
+        "start": 25,
+        "end": 40
+      },
+      {
+        "type": "PERSON",
+        "text": "Eric Rogers",
+        "start": 58,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0080",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Project Meridian, led by Andrew Garza.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Project Meridian",
+        "start": 40,
+        "end": 56
+      },
+      {
+        "type": "PERSON",
+        "text": "Andrew Garza",
+        "start": 65,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0081",
+    "category": "synthetic",
+    "text": "The meeting notes mention King, Ramirez and Miranda's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "King, Ramirez and Miranda",
+        "start": 26,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0082",
+    "category": "synthetic",
+    "text": "Server log: request from 84.68.199.80 authenticated as Todd Krause.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "84.68.199.80",
+        "start": 25,
+        "end": 37
+      },
+      {
+        "type": "PERSON",
+        "text": "Todd Krause",
+        "start": 55,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0083",
+    "category": "synthetic",
+    "text": "api_key = \"AKIA8ROIJ6J7BRCPVO48\"  # do not commit this, Sonya Floyd",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "AKIA8ROIJ6J7BRCPVO48",
+        "start": 11,
+        "end": 31
+      },
+      {
+        "type": "PERSON",
+        "text": "Sonya Floyd",
+        "start": 56,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0084",
+    "category": "synthetic",
+    "text": "The meeting notes mention Perkins LLC's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Perkins LLC",
+        "start": 26,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0085",
+    "category": "synthetic",
+    "text": "Tracy Woods and Dakota Williams Jr. are co-leading the Hudson, Olson and Wells migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Tracy Woods",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "type": "PERSON",
+        "text": "Dakota Williams Jr.",
+        "start": 16,
+        "end": 35
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Hudson, Olson and Wells",
+        "start": 55,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0086",
+    "category": "synthetic",
+    "text": "For verification, Geoffrey Smith provided PAN UCEAM5617F and phone 514-797-0139.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Geoffrey Smith",
+        "start": 18,
+        "end": 32
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "UCEAM5617F",
+        "start": 46,
+        "end": 56
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "514-797-0139",
+        "start": 67,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0087",
+    "category": "synthetic",
+    "text": "Patient Dr. Henry Davila was diagnosed with asthma on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Dr. Henry Davila",
+        "start": 8,
+        "end": 24
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "asthma",
+        "start": 44,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0088",
+    "category": "synthetic",
+    "text": "For verification, Heather Jackson provided PAN VIDPN1353Q and phone 783.639.2576x3973.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Heather Jackson",
+        "start": 18,
+        "end": 33
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "VIDPN1353Q",
+        "start": 47,
+        "end": 57
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "783.639.2576x3973",
+        "start": 68,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0089",
+    "category": "synthetic",
+    "text": "Please reach out to Andrew Sandoval at christopher44@example.com before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Andrew Sandoval",
+        "start": 20,
+        "end": 35
+      },
+      {
+        "type": "EMAIL",
+        "text": "christopher44@example.com",
+        "start": 39,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0090",
+    "category": "synthetic",
+    "text": "Emergency contact for Tara Hoover is Daniel Cowan, reachable at 731.343.5472x40086.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Tara Hoover",
+        "start": 22,
+        "end": 33
+      },
+      {
+        "type": "PERSON",
+        "text": "Daniel Cowan",
+        "start": 37,
+        "end": 49
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "731.343.5472x40086",
+        "start": 64,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0091",
+    "category": "synthetic",
+    "text": "Please reach out to Christopher Goodman at reyesjesse@example.org before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Christopher Goodman",
+        "start": 20,
+        "end": 39
+      },
+      {
+        "type": "EMAIL",
+        "text": "reyesjesse@example.org",
+        "start": 43,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0092",
+    "category": "synthetic",
+    "text": "Server log: request from 186.109.243.192 authenticated as Frank Collins.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "186.109.243.192",
+        "start": 25,
+        "end": 40
+      },
+      {
+        "type": "PERSON",
+        "text": "Frank Collins",
+        "start": 58,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0093",
+    "category": "synthetic",
+    "text": "Please reach out to Laura Horne at samuel76@example.org before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Laura Horne",
+        "start": 20,
+        "end": 31
+      },
+      {
+        "type": "EMAIL",
+        "text": "samuel76@example.org",
+        "start": 35,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0094",
+    "category": "synthetic",
+    "text": "The meeting notes mention Parker PLC's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Parker PLC",
+        "start": 26,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0095",
+    "category": "synthetic",
+    "text": "Ticket #4521: Becky White reported an issue, contact via danielglenda@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Becky White",
+        "start": 14,
+        "end": 25
+      },
+      {
+        "type": "EMAIL",
+        "text": "danielglenda@example.com",
+        "start": 57,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0096",
+    "category": "synthetic",
+    "text": "Ticket #4521: Caleb Clark reported an issue, contact via john83@example.net.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Caleb Clark",
+        "start": 14,
+        "end": 25
+      },
+      {
+        "type": "EMAIL",
+        "text": "john83@example.net",
+        "start": 57,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0097",
+    "category": "synthetic",
+    "text": "Please reach out to Lisa Dalton at kblack@example.net before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Lisa Dalton",
+        "start": 20,
+        "end": 31
+      },
+      {
+        "type": "EMAIL",
+        "text": "kblack@example.net",
+        "start": 35,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0098",
+    "category": "synthetic",
+    "text": "Ticket #4521: Angela Perkins reported an issue, contact via jameslane@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Angela Perkins",
+        "start": 14,
+        "end": 28
+      },
+      {
+        "type": "EMAIL",
+        "text": "jameslane@example.com",
+        "start": 60,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0099",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Initiative Falcon, led by Matthew Kelly.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Initiative Falcon",
+        "start": 40,
+        "end": 57
+      },
+      {
+        "type": "PERSON",
+        "text": "Matthew Kelly",
+        "start": 66,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0100",
+    "category": "synthetic",
+    "text": "Please reach out to Michael Jones at changdavid@example.com before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Michael Jones",
+        "start": 20,
+        "end": 33
+      },
+      {
+        "type": "EMAIL",
+        "text": "changdavid@example.com",
+        "start": 37,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0101",
+    "category": "synthetic",
+    "text": "Shipping to 6767 Richard Causeway, New Sandy, FM 01691, attention Jean Carter.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "6767 Richard Causeway, New Sandy, FM 01691",
+        "start": 12,
+        "end": 54
+      },
+      {
+        "type": "PERSON",
+        "text": "Jean Carter",
+        "start": 66,
+        "end": 77
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0102",
+    "category": "synthetic",
+    "text": "SSN on file: 628-29-1050, associated with applicant Aaron Mccoy.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "628-29-1050",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Aaron Mccoy",
+        "start": 52,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0103",
+    "category": "synthetic",
+    "text": "Please reach out to Charles Ware at tomferguson@example.net before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Charles Ware",
+        "start": 20,
+        "end": 32
+      },
+      {
+        "type": "EMAIL",
+        "text": "tomferguson@example.net",
+        "start": 36,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0104",
+    "category": "synthetic",
+    "text": "Patient Michael Jones was diagnosed with type 2 diabetes on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Michael Jones",
+        "start": 8,
+        "end": 21
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "type 2 diabetes",
+        "start": 41,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0105",
+    "category": "synthetic",
+    "text": "Emergency contact for Gwendolyn Wood is Laura Jordan, reachable at (902)543-8104x35058.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Gwendolyn Wood",
+        "start": 22,
+        "end": 36
+      },
+      {
+        "type": "PERSON",
+        "text": "Laura Jordan",
+        "start": 40,
+        "end": 52
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "(902)543-8104x35058",
+        "start": 67,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0106",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Project Nightingale, led by Rachel Acosta.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Project Nightingale",
+        "start": 40,
+        "end": 59
+      },
+      {
+        "type": "PERSON",
+        "text": "Rachel Acosta",
+        "start": 68,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0107",
+    "category": "synthetic",
+    "text": "SSN on file: 642-60-9352, associated with applicant Walter Jackson.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "642-60-9352",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Walter Jackson",
+        "start": 52,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0108",
+    "category": "synthetic",
+    "text": "Brett Sutton called from 420.646.2608x36582 regarding the Kelley-Garrett account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Brett Sutton",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "420.646.2608x36582",
+        "start": 25,
+        "end": 43
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Kelley-Garrett",
+        "start": 58,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0109",
+    "category": "synthetic",
+    "text": "Server log: request from 157.221.81.101 authenticated as Mercedes Wells.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "157.221.81.101",
+        "start": 25,
+        "end": 39
+      },
+      {
+        "type": "PERSON",
+        "text": "Mercedes Wells",
+        "start": 57,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0110",
+    "category": "synthetic",
+    "text": "Please reach out to Jose Young at haley99@example.org before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jose Young",
+        "start": 20,
+        "end": 30
+      },
+      {
+        "type": "EMAIL",
+        "text": "haley99@example.org",
+        "start": 34,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0111",
+    "category": "synthetic",
+    "text": "Please reach out to Jennifer Buck at amanda71@example.com before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jennifer Buck",
+        "start": 20,
+        "end": 33
+      },
+      {
+        "type": "EMAIL",
+        "text": "amanda71@example.com",
+        "start": 37,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0112",
+    "category": "synthetic",
+    "text": "api_key = \"AKIAEI2NOP8QDDY2L9RH\"  # do not commit this, Kimberly Suarez",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "AKIAEI2NOP8QDDY2L9RH",
+        "start": 11,
+        "end": 31
+      },
+      {
+        "type": "PERSON",
+        "text": "Kimberly Suarez",
+        "start": 56,
+        "end": 71
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0113",
+    "category": "synthetic",
+    "text": "James Rivera's card ending in 3501714244123869 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "James Rivera",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "3501714244123869",
+        "start": 30,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0114",
+    "category": "synthetic",
+    "text": "SSN on file: 288-22-2709, associated with applicant Travis Spencer.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "288-22-2709",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Travis Spencer",
+        "start": 52,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0115",
+    "category": "synthetic",
+    "text": "The meeting notes mention Lopez, Bryant and Moore's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Lopez, Bryant and Moore",
+        "start": 26,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0116",
+    "category": "synthetic",
+    "text": "For verification, William Hughes provided PAN SXTDM8882K and phone 873.375.4715x369.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "William Hughes",
+        "start": 18,
+        "end": 32
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "SXTDM8882K",
+        "start": 46,
+        "end": 56
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "873.375.4715x369",
+        "start": 67,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0117",
+    "category": "synthetic",
+    "text": "Ticket #4521: Amanda Gould reported an issue, contact via ocurry@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Amanda Gould",
+        "start": 14,
+        "end": 26
+      },
+      {
+        "type": "EMAIL",
+        "text": "ocurry@example.com",
+        "start": 58,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0118",
+    "category": "synthetic",
+    "text": "SSN on file: 611-30-9354, associated with applicant Michelle Miller.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "611-30-9354",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Michelle Miller",
+        "start": 52,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0119",
+    "category": "synthetic",
+    "text": "Shipping to 20599 Ashley Islands, Hillshire, VT 94454, attention Cody May.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "20599 Ashley Islands, Hillshire, VT 94454",
+        "start": 12,
+        "end": 53
+      },
+      {
+        "type": "PERSON",
+        "text": "Cody May",
+        "start": 65,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0120",
+    "category": "synthetic",
+    "text": "Emergency contact for John Allison is Ernest Thomas, reachable at 9844611505.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "John Allison",
+        "start": 22,
+        "end": 34
+      },
+      {
+        "type": "PERSON",
+        "text": "Ernest Thomas",
+        "start": 38,
+        "end": 51
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "9844611505",
+        "start": 66,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0121",
+    "category": "synthetic",
+    "text": "For verification, Mark Collins provided PAN EHMOY5208R and phone 836-669-2596x738.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Mark Collins",
+        "start": 18,
+        "end": 30
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "EHMOY5208R",
+        "start": 44,
+        "end": 54
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "836-669-2596x738",
+        "start": 65,
+        "end": 81
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0122",
+    "category": "synthetic",
+    "text": "The meeting notes mention Lee, Gillespie and Bentley's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Lee, Gillespie and Bentley",
+        "start": 26,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0123",
+    "category": "synthetic",
+    "text": "Server log: request from 64.237.217.31 authenticated as Kenneth Perry.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "64.237.217.31",
+        "start": 25,
+        "end": 38
+      },
+      {
+        "type": "PERSON",
+        "text": "Kenneth Perry",
+        "start": 56,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0124",
+    "category": "synthetic",
+    "text": "Blake Jacobs and Jonathan Bowen are co-leading the Walter LLC migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Blake Jacobs",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "PERSON",
+        "text": "Jonathan Bowen",
+        "start": 17,
+        "end": 31
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Walter LLC",
+        "start": 51,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0125",
+    "category": "synthetic",
+    "text": "api_key = \"sk-ant-lwhz0415hzdpau5fvkp5xhjfh2za8vaw\"  # do not commit this, Breanna Zhang",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ant-lwhz0415hzdpau5fvkp5xhjfh2za8vaw",
+        "start": 11,
+        "end": 50
+      },
+      {
+        "type": "PERSON",
+        "text": "Breanna Zhang",
+        "start": 75,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0126",
+    "category": "synthetic",
+    "text": "New employee Katie Booth will report to Roberta Parrish starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Katie Booth",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Roberta Parrish",
+        "start": 40,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0127",
+    "category": "synthetic",
+    "text": "New employee Cindy Peterson will report to Amy Marquez starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Cindy Peterson",
+        "start": 13,
+        "end": 27
+      },
+      {
+        "type": "PERSON",
+        "text": "Amy Marquez",
+        "start": 43,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0128",
+    "category": "synthetic",
+    "text": "Server log: request from 212.77.246.45 authenticated as Monica Hubbard.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "212.77.246.45",
+        "start": 25,
+        "end": 38
+      },
+      {
+        "type": "PERSON",
+        "text": "Monica Hubbard",
+        "start": 56,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0129",
+    "category": "synthetic",
+    "text": "Kyle Ford and Brian Alvarez are co-leading the Anderson Ltd migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Kyle Ford",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "type": "PERSON",
+        "text": "Brian Alvarez",
+        "start": 14,
+        "end": 27
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Anderson Ltd",
+        "start": 47,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0130",
+    "category": "synthetic",
+    "text": "Server log: request from 165.103.224.155 authenticated as Daniel Lopez.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "165.103.224.155",
+        "start": 25,
+        "end": 40
+      },
+      {
+        "type": "PERSON",
+        "text": "Daniel Lopez",
+        "start": 58,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0131",
+    "category": "synthetic",
+    "text": "Ticket #4521: Jesus Phillips reported an issue, contact via rbates@example.net.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jesus Phillips",
+        "start": 14,
+        "end": 28
+      },
+      {
+        "type": "EMAIL",
+        "text": "rbates@example.net",
+        "start": 60,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0132",
+    "category": "synthetic",
+    "text": "Shipping to 152 Beck Inlet Suite 472, Port Emily, MN 54996, attention Joel Henderson.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "152 Beck Inlet Suite 472, Port Emily, MN 54996",
+        "start": 12,
+        "end": 58
+      },
+      {
+        "type": "PERSON",
+        "text": "Joel Henderson",
+        "start": 70,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0133",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Project Aurora, led by Tina Cortez.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Project Aurora",
+        "start": 40,
+        "end": 54
+      },
+      {
+        "type": "PERSON",
+        "text": "Tina Cortez",
+        "start": 63,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0134",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Operation Bluebird, led by Jessica Lucas.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Operation Bluebird",
+        "start": 40,
+        "end": 58
+      },
+      {
+        "type": "PERSON",
+        "text": "Jessica Lucas",
+        "start": 67,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0135",
+    "category": "synthetic",
+    "text": "New employee Trevor Williams will report to Jack Martinez starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Trevor Williams",
+        "start": 13,
+        "end": 28
+      },
+      {
+        "type": "PERSON",
+        "text": "Jack Martinez",
+        "start": 44,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0136",
+    "category": "synthetic",
+    "text": "Matthew Phillips called from 768.832.5086 regarding the Schultz PLC account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Matthew Phillips",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "768.832.5086",
+        "start": 29,
+        "end": 41
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Schultz PLC",
+        "start": 56,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0137",
+    "category": "synthetic",
+    "text": "Brian Martin's card ending in 6556345914426519 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Brian Martin",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "6556345914426519",
+        "start": 30,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0138",
+    "category": "synthetic",
+    "text": "For verification, Cathy Vaughn provided PAN FDGBQ8141L and phone (707)913-9962x9431.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Cathy Vaughn",
+        "start": 18,
+        "end": 30
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "FDGBQ8141L",
+        "start": 44,
+        "end": 54
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "(707)913-9962x9431",
+        "start": 65,
+        "end": 83
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0139",
+    "category": "synthetic",
+    "text": "New employee Amber Reynolds will report to Joseph Reilly starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Amber Reynolds",
+        "start": 13,
+        "end": 27
+      },
+      {
+        "type": "PERSON",
+        "text": "Joseph Reilly",
+        "start": 43,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0140",
+    "category": "synthetic",
+    "text": "Please reach out to Michael Hensley at rhonda97@example.org before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Michael Hensley",
+        "start": 20,
+        "end": 35
+      },
+      {
+        "type": "EMAIL",
+        "text": "rhonda97@example.org",
+        "start": 39,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0141",
+    "category": "synthetic",
+    "text": "Jennifer Morse and Timothy Warren PhD are co-leading the Smith, Riley and Walton migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jennifer Morse",
+        "start": 0,
+        "end": 14
+      },
+      {
+        "type": "PERSON",
+        "text": "Timothy Warren PhD",
+        "start": 19,
+        "end": 37
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Smith, Riley and Walton",
+        "start": 57,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0142",
+    "category": "synthetic",
+    "text": "Server log: request from 98.187.141.111 authenticated as Riley Mullen.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "98.187.141.111",
+        "start": 25,
+        "end": 39
+      },
+      {
+        "type": "PERSON",
+        "text": "Riley Mullen",
+        "start": 57,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0143",
+    "category": "synthetic",
+    "text": "Emergency contact for Julia Jones is William Price, reachable at 001-832-941-9213x556.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Julia Jones",
+        "start": 22,
+        "end": 33
+      },
+      {
+        "type": "PERSON",
+        "text": "William Price",
+        "start": 37,
+        "end": 50
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "001-832-941-9213x556",
+        "start": 65,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0144",
+    "category": "synthetic",
+    "text": "api_key = \"sk-ak7l4gptunedgog0fiemro2zyrselz16\"  # do not commit this, James Hall DDS",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ak7l4gptunedgog0fiemro2zyrselz16",
+        "start": 11,
+        "end": 46
+      },
+      {
+        "type": "PERSON",
+        "text": "James Hall DDS",
+        "start": 71,
+        "end": 85
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0145",
+    "category": "synthetic",
+    "text": "Alyssa Parks's card ending in 4968042483640995 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Alyssa Parks",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4968042483640995",
+        "start": 30,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0146",
+    "category": "synthetic",
+    "text": "Shipping to USNV Anderson, FPO AA 17835, attention Vanessa Santos.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "USNV Anderson, FPO AA 17835",
+        "start": 12,
+        "end": 39
+      },
+      {
+        "type": "PERSON",
+        "text": "Vanessa Santos",
+        "start": 51,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0147",
+    "category": "synthetic",
+    "text": "Patient Richard Rios was diagnosed with asthma on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Richard Rios",
+        "start": 8,
+        "end": 20
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "asthma",
+        "start": 40,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0148",
+    "category": "synthetic",
+    "text": "Linda Kennedy's card ending in 4082595150334037 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Linda Kennedy",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4082595150334037",
+        "start": 31,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "id": "synth_999_0149",
+    "category": "synthetic",
+    "text": "For verification, Mark Pittman provided PAN IZSKM8294J and phone (558)622-8249x764.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Mark Pittman",
+        "start": 18,
+        "end": 30
+      },
+      {
+        "type": "PAN_NUMBER",
+        "text": "IZSKM8294J",
+        "start": 44,
+        "end": 54
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "(558)622-8249x764",
+        "start": 65,
+        "end": 82
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0000",
+    "category": "synthetic",
+    "text": "Patient Irya Dhar was diagnosed with anemia on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Irya Dhar",
+        "start": 8,
+        "end": 17
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "anemia",
+        "start": 37,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0001",
+    "category": "synthetic",
+    "text": "Bhavini Kashyap's card ending in 675972454663 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Bhavini Kashyap",
+        "start": 0,
+        "end": 15
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "675972454663",
+        "start": 33,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0002",
+    "category": "synthetic",
+    "text": "Patient Lipika Mall was diagnosed with anemia on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Lipika Mall",
+        "start": 8,
+        "end": 19
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "anemia",
+        "start": 39,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0003",
+    "category": "synthetic",
+    "text": "Please reach out to Vyanjana Comar at jeremiah63@example.net before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Vyanjana Comar",
+        "start": 20,
+        "end": 34
+      },
+      {
+        "type": "EMAIL",
+        "text": "jeremiah63@example.net",
+        "start": 38,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0004",
+    "category": "synthetic",
+    "text": "api_key = \"sk-ant-4h2qdygez0sq59auxspw25hmtnwiymgx\"  # do not commit this, Luke Lall",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-ant-4h2qdygez0sq59auxspw25hmtnwiymgx",
+        "start": 11,
+        "end": 50
+      },
+      {
+        "type": "PERSON",
+        "text": "Luke Lall",
+        "start": 75,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0005",
+    "category": "synthetic",
+    "text": "Please reach out to Shravya Hayre at viglopa@example.org before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Shravya Hayre",
+        "start": 20,
+        "end": 33
+      },
+      {
+        "type": "EMAIL",
+        "text": "viglopa@example.org",
+        "start": 37,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0006",
+    "category": "synthetic",
+    "text": "New employee Nathan Kurian will report to George Ganesh starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Nathan Kurian",
+        "start": 13,
+        "end": 26
+      },
+      {
+        "type": "PERSON",
+        "text": "George Ganesh",
+        "start": 42,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0007",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_1999_0008",
+    "category": "synthetic",
+    "text": "The meeting notes mention Kade Group's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Kade Group",
+        "start": 26,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0009",
+    "category": "synthetic",
+    "text": "Patient Ati Natarajan was diagnosed with seasonal allergies on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Ati Natarajan",
+        "start": 8,
+        "end": 21
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "seasonal allergies",
+        "start": 41,
+        "end": 59
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0010",
+    "category": "synthetic",
+    "text": "api_key = \"sk-9xf5297on7r2jbozk7t4tqmgjnulcxqs\"  # do not commit this, Kamala Kulkarni",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-9xf5297on7r2jbozk7t4tqmgjnulcxqs",
+        "start": 11,
+        "end": 46
+      },
+      {
+        "type": "PERSON",
+        "text": "Kamala Kulkarni",
+        "start": 71,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0011",
+    "category": "synthetic",
+    "text": "Niharika Nath's card ending in 3535662877512967 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Niharika Nath",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "3535662877512967",
+        "start": 31,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0012",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_1999_0013",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_1999_0014",
+    "category": "synthetic",
+    "text": "Ticket #4521: Nandini Subramanian reported an issue, contact via chamelihans@example.net.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Nandini Subramanian",
+        "start": 14,
+        "end": 33
+      },
+      {
+        "type": "EMAIL",
+        "text": "chamelihans@example.net",
+        "start": 65,
+        "end": 88
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0015",
+    "category": "synthetic",
+    "text": "Server log: request from 129.246.202.38 authenticated as Leena Raju.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "129.246.202.38",
+        "start": 25,
+        "end": 39
+      },
+      {
+        "type": "PERSON",
+        "text": "Leena Raju",
+        "start": 57,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0016",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_1999_0017",
+    "category": "synthetic",
+    "text": "Ticket #4521: Libni Sane reported an issue, contact via jananichacko@example.com.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Libni Sane",
+        "start": 14,
+        "end": 24
+      },
+      {
+        "type": "EMAIL",
+        "text": "jananichacko@example.com",
+        "start": 56,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0018",
+    "category": "synthetic",
+    "text": "Advika Tata and Mitali Maharaj are co-leading the Kari PLC migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Advika Tata",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "type": "PERSON",
+        "text": "Mitali Maharaj",
+        "start": 16,
+        "end": 30
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Kari PLC",
+        "start": 50,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0019",
+    "category": "synthetic",
+    "text": "Shipping to 75/70, Vora Ganj, Deoghar-613349, attention Aarini Nadig.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "75/70, Vora Ganj, Deoghar-613349",
+        "start": 12,
+        "end": 44
+      },
+      {
+        "type": "PERSON",
+        "text": "Aarini Nadig",
+        "start": 56,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0020",
+    "category": "synthetic",
+    "text": "Shipping to 39/592, Shankar Marg, Tiruppur-643733, attention Anamika Mohanty.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "39/592, Shankar Marg, Tiruppur-643733",
+        "start": 12,
+        "end": 49
+      },
+      {
+        "type": "PERSON",
+        "text": "Anamika Mohanty",
+        "start": 61,
+        "end": 76
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0021",
+    "category": "synthetic",
+    "text": "New employee Faras Om will report to Inaya Balan starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Faras Om",
+        "start": 13,
+        "end": 21
+      },
+      {
+        "type": "PERSON",
+        "text": "Inaya Balan",
+        "start": 37,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0022",
+    "category": "synthetic",
+    "text": "SSN on file: 506-97-2294, associated with applicant Wriddhish Murty.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "506-97-2294",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Wriddhish Murty",
+        "start": 52,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0023",
+    "category": "synthetic",
+    "text": "Devansh Prabhakar and Farhan Chanda are co-leading the Andra-Choudhury migration project.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Devansh Prabhakar",
+        "start": 0,
+        "end": 17
+      },
+      {
+        "type": "PERSON",
+        "text": "Farhan Chanda",
+        "start": 22,
+        "end": 35
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Andra-Choudhury",
+        "start": 55,
+        "end": 70
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0024",
+    "category": "synthetic",
+    "text": "Server log: request from 121.198.148.31 authenticated as Keya Som.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "121.198.148.31",
+        "start": 25,
+        "end": 39
+      },
+      {
+        "type": "PERSON",
+        "text": "Keya Som",
+        "start": 57,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0025",
+    "category": "synthetic",
+    "text": "Please reach out to Balhaar Rana at aahanaraju@example.com before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Balhaar Rana",
+        "start": 20,
+        "end": 32
+      },
+      {
+        "type": "EMAIL",
+        "text": "aahanaraju@example.com",
+        "start": 36,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0026",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_1999_0027",
+    "category": "synthetic",
+    "text": "Emergency contact for Avi Sidhu is Sanaya Gaba, reachable at +916866898174.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Avi Sidhu",
+        "start": 22,
+        "end": 31
+      },
+      {
+        "type": "PERSON",
+        "text": "Sanaya Gaba",
+        "start": 35,
+        "end": 46
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+916866898174",
+        "start": 61,
+        "end": 74
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0028",
+    "category": "synthetic",
+    "text": "Shipping to H.No. 38, Bhatti Path, Belgaum-693173, attention Nilima Dugar.",
+    "entities": [
+      {
+        "type": "ADDRESS",
+        "text": "H.No. 38, Bhatti Path, Belgaum-693173",
+        "start": 12,
+        "end": 49
+      },
+      {
+        "type": "PERSON",
+        "text": "Nilima Dugar",
+        "start": 61,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0029",
+    "category": "synthetic",
+    "text": "SSN on file: 893-19-1987, associated with applicant Laksh Memon.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "893-19-1987",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Laksh Memon",
+        "start": 52,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0030",
+    "category": "synthetic",
+    "text": "New employee Anya Rastogi will report to Nisha Kadakia starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Anya Rastogi",
+        "start": 13,
+        "end": 25
+      },
+      {
+        "type": "PERSON",
+        "text": "Nisha Kadakia",
+        "start": 41,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0031",
+    "category": "synthetic",
+    "text": "Emergency contact for Xalak Pathak is Azad Brar, reachable at +919648568755.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Xalak Pathak",
+        "start": 22,
+        "end": 34
+      },
+      {
+        "type": "PERSON",
+        "text": "Azad Brar",
+        "start": 38,
+        "end": 47
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+919648568755",
+        "start": 62,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0032",
+    "category": "synthetic",
+    "text": "The meeting notes mention Atwal, Kar and Hora's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Atwal, Kar and Hora",
+        "start": 26,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0033",
+    "category": "synthetic",
+    "text": "New employee Alka Badami will report to Azad Khalsa starting Monday.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Alka Badami",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Azad Khalsa",
+        "start": 40,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0034",
+    "category": "synthetic",
+    "text": "Server log: request from 114.251.10.82 authenticated as Ekaraj Iyer.",
+    "entities": [
+      {
+        "type": "IP_ADDRESS",
+        "text": "114.251.10.82",
+        "start": 25,
+        "end": 38
+      },
+      {
+        "type": "PERSON",
+        "text": "Ekaraj Iyer",
+        "start": 56,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0035",
+    "category": "synthetic",
+    "text": "Internal codename for the initiative is Project Meridian, led by Ekantika Bail.",
+    "entities": [
+      {
+        "type": "PROJECT_CODENAME",
+        "text": "Project Meridian",
+        "start": 40,
+        "end": 56
+      },
+      {
+        "type": "PERSON",
+        "text": "Ekantika Bail",
+        "start": 65,
+        "end": 78
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0036",
+    "category": "synthetic",
+    "text": "Unnati Chana's card ending in 180064229180573 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Unnati Chana",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "180064229180573",
+        "start": 30,
+        "end": 45
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0037",
+    "category": "synthetic",
+    "text": "api_key = \"sk-uy9vhqcjvyonl6xgumokz5vr2hqh920k\"  # do not commit this, Tristan Nazareth",
+    "entities": [
+      {
+        "type": "API_KEY",
+        "text": "sk-uy9vhqcjvyonl6xgumokz5vr2hqh920k",
+        "start": 11,
+        "end": 46
+      },
+      {
+        "type": "PERSON",
+        "text": "Tristan Nazareth",
+        "start": 71,
+        "end": 87
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0038",
+    "category": "synthetic",
+    "text": "Aarna Bawa called from +917205061052 regarding the Wagle-Sura account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Aarna Bawa",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+917205061052",
+        "start": 23,
+        "end": 36
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Wagle-Sura",
+        "start": 51,
+        "end": 61
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0039",
+    "category": "synthetic",
+    "text": "Please reach out to George Sanghvi at gardepriya@example.net before end of day.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "George Sanghvi",
+        "start": 20,
+        "end": 34
+      },
+      {
+        "type": "EMAIL",
+        "text": "gardepriya@example.net",
+        "start": 38,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0040",
+    "category": "synthetic",
+    "text": "Raksha Prabhu's card ending in 4542580979844 was declined at checkout.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Raksha Prabhu",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4542580979844",
+        "start": 31,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0041",
+    "category": "synthetic",
+    "text": "The meeting notes mention Shukla and Sons's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Shukla and Sons",
+        "start": 26,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0042",
+    "category": "synthetic",
+    "text": "The meeting notes mention Soman, Gopal and Mandal's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Soman, Gopal and Mandal",
+        "start": 26,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0043",
+    "category": "synthetic",
+    "text": "SSN on file: 290-23-1330, associated with applicant Hemangini Wagle.",
+    "entities": [
+      {
+        "type": "SSN",
+        "text": "290-23-1330",
+        "start": 13,
+        "end": 24
+      },
+      {
+        "type": "PERSON",
+        "text": "Hemangini Wagle",
+        "start": 52,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0044",
+    "category": "synthetic",
+    "text": "The meeting notes mention Nayak, Nadkarni and Varkey's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Nayak, Nadkarni and Varkey",
+        "start": 26,
+        "end": 52
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0045",
+    "category": "synthetic",
+    "text": "The meeting notes mention Sandhu Ltd's Q3 targets but no personal data at all.",
+    "entities": [
+      {
+        "type": "ORGANIZATION",
+        "text": "Sandhu Ltd",
+        "start": 26,
+        "end": 36
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0046",
+    "category": "synthetic",
+    "text": "This document contains no sensitive information, just general policy text.",
+    "entities": []
+  },
+  {
+    "id": "synth_1999_0047",
+    "category": "synthetic",
+    "text": "Emergency contact for Abhimanyu Rattan is Darpan Warrior, reachable at +918505575970.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Abhimanyu Rattan",
+        "start": 22,
+        "end": 38
+      },
+      {
+        "type": "PERSON",
+        "text": "Darpan Warrior",
+        "start": 42,
+        "end": 56
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+918505575970",
+        "start": 71,
+        "end": 84
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0048",
+    "category": "synthetic",
+    "text": "Patient Aarini Srinivasan was diagnosed with anemia on this visit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Aarini Srinivasan",
+        "start": 8,
+        "end": 25
+      },
+      {
+        "type": "MEDICAL_CONDITION",
+        "text": "anemia",
+        "start": 45,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "id": "synth_1999_0049",
+    "category": "synthetic",
+    "text": "Jackson Basak called from 9151607051 regarding the Chandra-Gola account.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Jackson Basak",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "9151607051",
+        "start": 26,
+        "end": 36
+      },
+      {
+        "type": "ORGANIZATION",
+        "text": "Chandra-Gola",
+        "start": 51,
+        "end": 63
+      }
+    ]
+  }
+]

@@ -1,0 +1,1532 @@
+{
+  "diagnostic": {
+    "detector_name": "hybrid presidio+onnx (diagnostic set)",
+    "mode": "exact",
+    "num_cases": 16,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.7105,
+      "recall": 0.8438,
+      "f1": 0.7714
+    },
+    "per_type": {
+      "AADHAAR_LIKE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "support": 1
+      },
+      "ORGANIZATION": {
+        "precision": 0.1667,
+        "recall": 1.0,
+        "f1": 0.2857,
+        "support": 1
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "PERSON": {
+        "precision": 0.8333,
+        "recall": 0.7692,
+        "f1": 0.8,
+        "support": 13
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "SSN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.26079,
+      "p50": 0.05505,
+      "p95": 3.33299,
+      "p99": 3.33299,
+      "max": 3.33299
+    },
+    "failures_sample": [
+      {
+        "id": "multi_002",
+        "text": "Dr. Anjali Mehta prescribed metformin for Rohan's type 2 diabetes at Apollo Hospital.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Dr. Anjali Mehta",
+            "start": 0,
+            "end": 16
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "metformin",
+            "start": 28,
+            "end": 37
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Rohan'",
+            "start": 42,
+            "end": 48
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "Anjali Mehta",
+            "start": 4,
+            "end": 16
+          },
+          {
+            "type": "PERSON",
+            "text": "Rohan",
+            "start": 42,
+            "end": 47
+          }
+        ]
+      },
+      {
+        "id": "code_002",
+        "text": "curl -H 'Authorization: Bearer AKIAIOSFODNN7EXAMPLE' https://api.internal.com/users?ip=192.168.1.45",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "curl",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "ambig_001",
+        "text": "Grace decided to say grace before the meal with Will and Rose.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "grace",
+            "start": 21,
+            "end": 26
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "ambig_002",
+        "text": "May will join the June project after March completes her review.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "March",
+            "start": 37,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "id": "structured_001",
+        "text": "Card number: 4111 1111 1111 1111, expiry 08/27, SSN 123 45 6789.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "45 6789",
+            "start": 56,
+            "end": 63
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "SSN",
+            "text": "123 45 6789",
+            "start": 52,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "india_001",
+        "text": "My PAN is ABCDE1234F and Aadhaar number is 1234 5678 9012.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Aadhaar",
+            "start": 25,
+            "end": 32
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "india_002",
+        "text": "Send the offer letter to Kavya Reddy at Flat 302, Prestige Towers, Hyderabad, and cc her manager Suresh.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "Flat 302",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Prestige Towers, Hyderabad",
+            "start": 50,
+            "end": 76
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "Flat 302, Prestige Towers, Hyderabad",
+            "start": 40,
+            "end": 76
+          }
+        ]
+      },
+      {
+        "id": "negative_002",
+        "text": "Please summarize the key findings from the attached research paper on climate change.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "climate",
+            "start": 70,
+            "end": 77
+          },
+          {
+            "type": "MEDICAL_CONDITION",
+            "text": "change",
+            "start": 78,
+            "end": 84
+          }
+        ],
+        "false_negatives": []
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_exact": {
+    "detector_name": "hybrid presidio+onnx (synthetic dev, exact match)",
+    "mode": "exact",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.7341,
+      "recall": 0.8605,
+      "f1": 0.7923
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.3333,
+        "recall": 0.3799,
+        "f1": 0.3551,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.8293,
+        "recall": 0.9764,
+        "f1": 0.8969,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 0.7724,
+        "f1": 0.8716,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.03509,
+      "p50": 0.03468,
+      "p95": 0.0443,
+      "p99": 0.05126,
+      "max": 0.06941
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0004",
+        "text": "SSN on file: 219-65-4346, associated with applicant James House.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Jefferson",
+            "start": 34,
+            "end": 43
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0014",
+        "text": "Matthew Moon and Kevin Walters are co-leading the Wilson-Barton migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton migration",
+            "start": 50,
+            "end": 73
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton",
+            "start": 50,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0022",
+        "text": "Shipping to 49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439, attention Joseph Bennett.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "49",
+            "start": 12,
+            "end": 14
+          },
+          {
+            "type": "ADDRESS",
+            "text": "4",
+            "start": 16,
+            "end": 17
+          },
+          {
+            "type": "ADDRESS",
+            "text": "03",
+            "start": 37,
+            "end": 39
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Port Derrick",
+            "start": 42,
+            "end": 54
+          },
+          {
+            "type": "ADDRESS",
+            "text": "KS 38439",
+            "start": 56,
+            "end": 64
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439",
+            "start": 12,
+            "end": 64
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0023",
+        "text": "The meeting notes mention Morgan, Cook and Jackson's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Morgan",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Cook",
+            "start": 34,
+            "end": 38
+          },
+          {
+            "type": "PERSON",
+            "text": "Jackson",
+            "start": 43,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Morgan, Cook and Jackson",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0025",
+        "text": "SSN on file: 473-99-4617, associated with applicant Matthew Bates.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0026",
+        "text": "Kathryn Barnes called from 481-841-2478 regarding the Potts and Sons account.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "481-841-2478",
+            "start": 27,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0027",
+        "text": "Ricardo Young and David Fowler are co-leading the Butler, Beck and Miller migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Butler",
+            "start": 50,
+            "end": 56
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Beck",
+            "start": 58,
+            "end": 62
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Miller migration",
+            "start": 67,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Butler, Beck and Miller",
+            "start": 50,
+            "end": 73
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0032",
+        "text": "Shipping to 16558 Fischer Flat, Porterton, AZ 18462, attention Amber Campbell.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "Fischer Flat",
+            "start": 18,
+            "end": 30
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Porterton, AZ 18462",
+            "start": 32,
+            "end": 51
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "16558 Fischer Flat, Porterton, AZ 18462",
+            "start": 12,
+            "end": 51
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_partial": {
+    "detector_name": "hybrid presidio+onnx (synthetic dev, partial match)",
+    "mode": "partial",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.8046,
+      "recall": 0.943,
+      "f1": 0.8683
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.2783,
+        "recall": 1.0,
+        "f1": 0.4354,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.6569,
+        "recall": 0.7486,
+        "f1": 0.6997,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.8414,
+        "recall": 0.9905,
+        "f1": 0.9099,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 0.7724,
+        "f1": 0.8716,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.04457,
+      "p50": 0.04068,
+      "p95": 0.07822,
+      "p99": 0.10366,
+      "max": 0.23333
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0004",
+        "text": "SSN on file: 219-65-4346, associated with applicant James House.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Jefferson",
+            "start": 34,
+            "end": 43
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0022",
+        "text": "Shipping to 49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439, attention Joseph Bennett.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "4",
+            "start": 16,
+            "end": 17
+          },
+          {
+            "type": "ADDRESS",
+            "text": "03",
+            "start": 37,
+            "end": 39
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Port Derrick",
+            "start": 42,
+            "end": 54
+          },
+          {
+            "type": "ADDRESS",
+            "text": "KS 38439",
+            "start": 56,
+            "end": 64
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0023",
+        "text": "The meeting notes mention Morgan, Cook and Jackson's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Morgan",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Cook",
+            "start": 34,
+            "end": 38
+          },
+          {
+            "type": "PERSON",
+            "text": "Jackson",
+            "start": 43,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Morgan, Cook and Jackson",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0025",
+        "text": "SSN on file: 473-99-4617, associated with applicant Matthew Bates.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0026",
+        "text": "Kathryn Barnes called from 481-841-2478 regarding the Potts and Sons account.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "481-841-2478",
+            "start": 27,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0027",
+        "text": "Ricardo Young and David Fowler are co-leading the Butler, Beck and Miller migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Beck",
+            "start": 58,
+            "end": 62
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Miller migration",
+            "start": 67,
+            "end": 83
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0032",
+        "text": "Shipping to 16558 Fischer Flat, Porterton, AZ 18462, attention Amber Campbell.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "Porterton, AZ 18462",
+            "start": 32,
+            "end": 51
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0033",
+        "text": "Ronald Patel called from 809-474-9930x9728 regarding the Allen, Armstrong and Graves account.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Allen",
+            "start": 57,
+            "end": 62
+          },
+          {
+            "type": "PERSON",
+            "text": "Graves",
+            "start": 78,
+            "end": 84
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Allen, Armstrong and Graves",
+            "start": 57,
+            "end": 84
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  },
+  "heldout_exact": {
+    "detector_name": "hybrid presidio+onnx (HELD-OUT, exact match)",
+    "mode": "exact",
+    "num_cases": 200,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.7612,
+      "recall": 0.875,
+      "f1": 0.8141
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 13
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 0.9091,
+        "f1": 0.9524,
+        "support": 11
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 29
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 17
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 13
+      },
+      "ORGANIZATION": {
+        "precision": 0.3864,
+        "recall": 0.425,
+        "f1": 0.4048,
+        "support": 40
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "PERSON": {
+        "precision": 0.808,
+        "recall": 0.9573,
+        "f1": 0.8764,
+        "support": 211
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.9655,
+        "recall": 0.8485,
+        "f1": 0.9032,
+        "support": 33
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "SSN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 11
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.03591,
+      "p50": 0.03562,
+      "p95": 0.04369,
+      "p99": 0.05904,
+      "max": 0.09403
+    },
+    "failures_sample": [
+      {
+        "id": "synth_999_0001",
+        "text": "Wendy Johnson and Patricia Carroll are co-leading the Burns, Thomas and Aguirre migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Burns",
+            "start": 54,
+            "end": 59
+          },
+          {
+            "type": "PERSON",
+            "text": "Thomas",
+            "start": 61,
+            "end": 67
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Aguirre migration",
+            "start": 72,
+            "end": 89
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Burns, Thomas and Aguirre",
+            "start": 54,
+            "end": 79
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0003",
+        "text": "The meeting notes mention Anderson-Long's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Anderson-Long",
+            "start": 26,
+            "end": 39
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Anderson-Long",
+            "start": 26,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0010",
+        "text": "Shipping to 914 Benjamin Shoals Apt. 090, Turnerfort, CO 44898, attention Laura Thompson.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "914 Benjamin",
+            "start": 12,
+            "end": 24
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Sho",
+            "start": 25,
+            "end": 28
+          },
+          {
+            "type": "ADDRESS",
+            "text": "als",
+            "start": 28,
+            "end": 31
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Turnerfort",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "type": "ADDRESS",
+            "text": ", CO 44898",
+            "start": 52,
+            "end": 62
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "914 Benjamin Shoals Apt. 090, Turnerfort, CO 44898",
+            "start": 12,
+            "end": 62
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0015",
+        "text": "The meeting notes mention Buck, Gibbs and Vargas's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Buck",
+            "start": 26,
+            "end": 30
+          },
+          {
+            "type": "PERSON",
+            "text": "Gibbs",
+            "start": 32,
+            "end": 37
+          },
+          {
+            "type": "PERSON",
+            "text": "Vargas",
+            "start": 42,
+            "end": 48
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Buck, Gibbs and Vargas",
+            "start": 26,
+            "end": 48
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0021",
+        "text": "Earl Jackson and Eric Stone are co-leading the Owens-Grant migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Owens-Grant migration",
+            "start": 47,
+            "end": 68
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Owens-Grant",
+            "start": 47,
+            "end": 58
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0022",
+        "text": "Rachel Colon and Andrea Jacobson are co-leading the Anderson Ltd migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Anderson Ltd migration",
+            "start": 52,
+            "end": 74
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Anderson Ltd",
+            "start": 52,
+            "end": 64
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0025",
+        "text": "Heather Stone called from 5163002550 regarding the Griffith, Morales and Juarez account.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Griffith, Morales and Juarez",
+            "start": 51,
+            "end": 79
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0027",
+        "text": "Shipping to 7089 Hall Hills Suite 000, Meganmouth, MT 88230, attention Michelle Williams.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "7089 Hall Hills Suite 000",
+            "start": 12,
+            "end": 37
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Meganmouth, MT 88230",
+            "start": 39,
+            "end": 59
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "7089 Hall Hills Suite 000, Meganmouth, MT 88230",
+            "start": 12,
+            "end": 59
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0032",
+        "text": "SSN on file: 669-07-1179, associated with applicant Shawn Cunningham DDS.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_999_0034",
+        "text": "Emergency contact for Erin Palmer is Candice Valenzuela, reachable at 001-379-232-4097.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "001-379-232-4097",
+            "start": 70,
+            "end": 86
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  },
+  "heldout_partial": {
+    "detector_name": "hybrid presidio+onnx (HELD-OUT, partial match)",
+    "mode": "partial",
+    "num_cases": 200,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.8273,
+      "recall": 0.951,
+      "f1": 0.8848
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.3611,
+        "recall": 1.0,
+        "f1": 0.5306,
+        "support": 13
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 13
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 0.9091,
+        "f1": 0.9524,
+        "support": 11
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 29
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 17
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 13
+      },
+      "ORGANIZATION": {
+        "precision": 0.6364,
+        "recall": 0.7,
+        "f1": 0.6667,
+        "support": 40
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "PERSON": {
+        "precision": 0.836,
+        "recall": 0.9905,
+        "f1": 0.9067,
+        "support": 211
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.9655,
+        "recall": 0.8485,
+        "f1": 0.9032,
+        "support": 33
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "SSN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 11
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.03612,
+      "p50": 0.03521,
+      "p95": 0.04367,
+      "p99": 0.07063,
+      "max": 0.10036
+    },
+    "failures_sample": [
+      {
+        "id": "synth_999_0001",
+        "text": "Wendy Johnson and Patricia Carroll are co-leading the Burns, Thomas and Aguirre migration project.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Thomas",
+            "start": 61,
+            "end": 67
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Aguirre migration",
+            "start": 72,
+            "end": 89
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_999_0003",
+        "text": "The meeting notes mention Anderson-Long's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Anderson-Long",
+            "start": 26,
+            "end": 39
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Anderson-Long",
+            "start": 26,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0010",
+        "text": "Shipping to 914 Benjamin Shoals Apt. 090, Turnerfort, CO 44898, attention Laura Thompson.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Sho",
+            "start": 25,
+            "end": 28
+          },
+          {
+            "type": "ADDRESS",
+            "text": "als",
+            "start": 28,
+            "end": 31
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Turnerfort",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "type": "ADDRESS",
+            "text": ", CO 44898",
+            "start": 52,
+            "end": 62
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_999_0015",
+        "text": "The meeting notes mention Buck, Gibbs and Vargas's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Buck",
+            "start": 26,
+            "end": 30
+          },
+          {
+            "type": "PERSON",
+            "text": "Gibbs",
+            "start": 32,
+            "end": 37
+          },
+          {
+            "type": "PERSON",
+            "text": "Vargas",
+            "start": 42,
+            "end": 48
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Buck, Gibbs and Vargas",
+            "start": 26,
+            "end": 48
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0025",
+        "text": "Heather Stone called from 5163002550 regarding the Griffith, Morales and Juarez account.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Griffith, Morales and Juarez",
+            "start": 51,
+            "end": 79
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0027",
+        "text": "Shipping to 7089 Hall Hills Suite 000, Meganmouth, MT 88230, attention Michelle Williams.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "Meganmouth, MT 88230",
+            "start": 39,
+            "end": 59
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_999_0032",
+        "text": "SSN on file: 669-07-1179, associated with applicant Shawn Cunningham DDS.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_999_0034",
+        "text": "Emergency contact for Erin Palmer is Candice Valenzuela, reachable at 001-379-232-4097.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "001-379-232-4097",
+            "start": 70,
+            "end": 86
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0036",
+        "text": "Emergency contact for Deborah Lang is Patricia Jones, reachable at +1-391-548-9842x87971.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "+1-391-548-9842x87971",
+            "start": 67,
+            "end": 88
+          }
+        ]
+      },
+      {
+        "id": "synth_999_0040",
+        "text": "Brian Knight called from 001-333-248-6071x041 regarding the Norris Ltd account.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "001-333-248-6071x041",
+            "start": 25,
+            "end": 45
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  }
+}

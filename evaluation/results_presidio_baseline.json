@@ -1,0 +1,896 @@
+{
+  "diagnostic": {
+    "detector_name": "presidio_baseline (diagnostic set)",
+    "mode": "exact",
+    "num_cases": 16,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.8333,
+      "recall": 0.7812,
+      "f1": 0.8065
+    },
+    "per_type": {
+      "AADHAAR_LIKE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "ORGANIZATION": {
+        "precision": 0.1667,
+        "recall": 1.0,
+        "f1": 0.2857,
+        "support": 1
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "PERSON": {
+        "precision": 1.0,
+        "recall": 0.6154,
+        "f1": 0.7619,
+        "support": 13
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "SSN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.32461,
+      "p50": 0.02102,
+      "p95": 4.70193,
+      "p99": 4.70193,
+      "max": 4.70193
+    },
+    "failures_sample": [
+      {
+        "id": "multi_002",
+        "text": "Dr. Anjali Mehta prescribed metformin for Rohan's type 2 diabetes at Apollo Hospital.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Rohan",
+            "start": 42,
+            "end": 47
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "Rohan",
+            "start": 42,
+            "end": 47
+          }
+        ]
+      },
+      {
+        "id": "ambig_001",
+        "text": "Grace decided to say grace before the meal with Will and Rose.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Grace",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "Grace",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "type": "PERSON",
+            "text": "Will",
+            "start": 48,
+            "end": 52
+          }
+        ]
+      },
+      {
+        "id": "ambig_002",
+        "text": "May will join the June project after March completes her review.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "May",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "type": "PERSON",
+            "text": "March",
+            "start": 37,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "id": "structured_001",
+        "text": "Card number: 4111 1111 1111 1111, expiry 08/27, SSN 123 45 6789.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "SSN",
+            "text": "123 45 6789",
+            "start": 52,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "india_001",
+        "text": "My PAN is ABCDE1234F and Aadhaar number is 1234 5678 9012.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Aadhaar",
+            "start": 25,
+            "end": 32
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "india_002",
+        "text": "Send the offer letter to Kavya Reddy at Flat 302, Prestige Towers, Hyderabad, and cc her manager Suresh.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Prestige Towers",
+            "start": 50,
+            "end": 65
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "Flat 302, Prestige Towers, Hyderabad",
+            "start": 40,
+            "end": 76
+          }
+        ]
+      },
+      {
+        "id": "zero_shot_001",
+        "text": "Project Nightingale's launch has been delayed until the Q3 review with stakeholders.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Q3",
+            "start": 56,
+            "end": 58
+          }
+        ],
+        "false_negatives": []
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_exact": {
+    "detector_name": "presidio_baseline (synthetic dev, exact match)",
+    "mode": "exact",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.8061,
+      "recall": 0.8314,
+      "f1": 0.8185
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.3025,
+        "recall": 0.2737,
+        "f1": 0.2874,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.7749,
+        "recall": 0.9397,
+        "f1": 0.8494,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 0.7724,
+        "f1": 0.8716,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.01809,
+      "p50": 0.01614,
+      "p95": 0.03113,
+      "p99": 0.03986,
+      "max": 0.04698
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0003",
+        "text": "George Chapman called from 983-547-3829 regarding the Aguirre-Lee account.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Aguirre-Lee",
+            "start": 54,
+            "end": 65
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Aguirre-Lee",
+            "start": 54,
+            "end": 65
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0011",
+        "text": "The meeting notes mention Sullivan and Sons's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Sullivan",
+            "start": 26,
+            "end": 34
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Sons",
+            "start": 39,
+            "end": 43
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Q3",
+            "start": 46,
+            "end": 48
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Sullivan and Sons",
+            "start": 26,
+            "end": 43
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0014",
+        "text": "Matthew Moon and Kevin Walters are co-leading the Wilson-Barton migration project.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton",
+            "start": 50,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0022",
+        "text": "Shipping to 49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439, attention Joseph Bennett.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Jeffrey Rapid Apt",
+            "start": 18,
+            "end": 35
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439",
+            "start": 12,
+            "end": 64
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0023",
+        "text": "The meeting notes mention Morgan, Cook and Jackson's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Morgan",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Cook",
+            "start": 34,
+            "end": 38
+          },
+          {
+            "type": "PERSON",
+            "text": "Jackson",
+            "start": 43,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Morgan, Cook and Jackson",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0024",
+        "text": "The meeting notes mention Hayes LLC's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Q3",
+            "start": 38,
+            "end": 40
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0026",
+        "text": "Kathryn Barnes called from 481-841-2478 regarding the Potts and Sons account.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Potts",
+            "start": 54,
+            "end": 59
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Sons",
+            "start": 64,
+            "end": 68
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "481-841-2478",
+            "start": 27,
+            "end": 39
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Potts and Sons",
+            "start": 54,
+            "end": 68
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0027",
+        "text": "Ricardo Young and David Fowler are co-leading the Butler, Beck and Miller migration project.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Butler",
+            "start": 50,
+            "end": 56
+          },
+          {
+            "type": "PERSON",
+            "text": "Beck",
+            "start": 58,
+            "end": 62
+          },
+          {
+            "type": "PERSON",
+            "text": "Miller",
+            "start": 67,
+            "end": 73
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Butler, Beck and Miller",
+            "start": 50,
+            "end": 73
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_partial": {
+    "detector_name": "presidio_baseline (synthetic dev, partial match)",
+    "mode": "partial",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.832,
+      "recall": 0.8581,
+      "f1": 0.8449
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.5,
+        "recall": 0.4525,
+        "f1": 0.4751,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.7885,
+        "recall": 0.9563,
+        "f1": 0.8643,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 0.7724,
+        "f1": 0.8716,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.01738,
+      "p50": 0.01521,
+      "p95": 0.03014,
+      "p99": 0.03866,
+      "max": 0.04515
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0003",
+        "text": "George Chapman called from 983-547-3829 regarding the Aguirre-Lee account.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Aguirre-Lee",
+            "start": 54,
+            "end": 65
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Aguirre-Lee",
+            "start": 54,
+            "end": 65
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0011",
+        "text": "The meeting notes mention Sullivan and Sons's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Sullivan",
+            "start": 26,
+            "end": 34
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Q3",
+            "start": 46,
+            "end": 48
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0014",
+        "text": "Matthew Moon and Kevin Walters are co-leading the Wilson-Barton migration project.",
+        "false_positives": [],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton",
+            "start": 50,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0022",
+        "text": "Shipping to 49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439, attention Joseph Bennett.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Jeffrey Rapid Apt",
+            "start": 18,
+            "end": 35
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439",
+            "start": 12,
+            "end": 64
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0023",
+        "text": "The meeting notes mention Morgan, Cook and Jackson's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Morgan",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Cook",
+            "start": 34,
+            "end": 38
+          },
+          {
+            "type": "PERSON",
+            "text": "Jackson",
+            "start": 43,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Morgan, Cook and Jackson",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0024",
+        "text": "The meeting notes mention Hayes LLC's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Q3",
+            "start": 38,
+            "end": 40
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0026",
+        "text": "Kathryn Barnes called from 481-841-2478 regarding the Potts and Sons account.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Potts",
+            "start": 54,
+            "end": 59
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "481-841-2478",
+            "start": 27,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0027",
+        "text": "Ricardo Young and David Fowler are co-leading the Butler, Beck and Miller migration project.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Butler",
+            "start": 50,
+            "end": 56
+          },
+          {
+            "type": "PERSON",
+            "text": "Beck",
+            "start": 58,
+            "end": 62
+          },
+          {
+            "type": "PERSON",
+            "text": "Miller",
+            "start": 67,
+            "end": 73
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Butler, Beck and Miller",
+            "start": 50,
+            "end": 73
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  }
+}

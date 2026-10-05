@@ -1,0 +1,1120 @@
+{
+  "diagnostic": {
+    "detector_name": "distilbert (diagnostic set)",
+    "mode": "exact",
+    "num_cases": 16,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.4792,
+      "recall": 0.7188,
+      "f1": 0.575
+    },
+    "per_type": {
+      "AADHAAR_LIKE": {
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "support": 1
+      },
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "API_KEY": {
+        "precision": 0.3333,
+        "recall": 0.5,
+        "f1": 0.4,
+        "support": 2
+      },
+      "CREDIT_CARD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "EMAIL": {
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "support": 4
+      },
+      "IP_ADDRESS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "ORGANIZATION": {
+        "precision": 0.1111,
+        "recall": 1.0,
+        "f1": 0.2,
+        "support": 1
+      },
+      "PAN_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "PERSON": {
+        "precision": 0.8333,
+        "recall": 0.7692,
+        "f1": 0.8,
+        "support": 13
+      },
+      "PHONE_NUMBER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "PROJECT_CODENAME": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "SSN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.05546,
+      "p50": 0.01888,
+      "p95": 0.58312,
+      "p99": 0.58312,
+      "max": 0.58312
+    },
+    "failures_sample": [
+      {
+        "id": "multi_001",
+        "text": "Rahul Verma's phone number is +91-98765-43210 and his email is rahul.v@company.in.",
+        "false_positives": [
+          {
+            "type": "EMAIL",
+            "text": "rahul.v@company.",
+            "start": 63,
+            "end": 79
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "EMAIL",
+            "text": "rahul.v@company.in",
+            "start": 63,
+            "end": 81
+          }
+        ]
+      },
+      {
+        "id": "multi_002",
+        "text": "Dr. Anjali Mehta prescribed metformin for Rohan's type 2 diabetes at Apollo Hospital.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Dr. Anjali Mehta",
+            "start": 0,
+            "end": 16
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "metformin",
+            "start": 28,
+            "end": 37
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Rohan",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "type": "MEDICAL_CONDITION",
+            "text": "'s type 2 diabetes",
+            "start": 47,
+            "end": 65
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "Anjali Mehta",
+            "start": 4,
+            "end": 16
+          },
+          {
+            "type": "PERSON",
+            "text": "Rohan",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "type": "MEDICAL_CONDITION",
+            "text": "type 2 diabetes",
+            "start": 50,
+            "end": 65
+          }
+        ]
+      },
+      {
+        "id": "code_002",
+        "text": "curl -H 'Authorization: Bearer AKIAIOSFODNN7EXAMPLE' https://api.internal.com/users?ip=192.168.1.45",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "curl",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "API_KEY",
+            "text": "AK",
+            "start": 31,
+            "end": 33
+          },
+          {
+            "type": "EMAIL",
+            "text": "IAIOS",
+            "start": 33,
+            "end": 38
+          },
+          {
+            "type": "API_KEY",
+            "text": "FODNN7EXAMP",
+            "start": 38,
+            "end": 49
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "api",
+            "start": 61,
+            "end": 64
+          },
+          {
+            "type": "EMAIL",
+            "text": "internal.com",
+            "start": 65,
+            "end": 77
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "API_KEY",
+            "text": "AKIAIOSFODNN7EXAMPLE",
+            "start": 31,
+            "end": 51
+          }
+        ]
+      },
+      {
+        "id": "ambig_001",
+        "text": "Grace decided to say grace before the meal with Will and Rose.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "grace",
+            "start": 21,
+            "end": 26
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "ambig_002",
+        "text": "May will join the June project after March completes her review.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "June",
+            "start": 18,
+            "end": 22
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "March",
+            "start": 37,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "id": "structured_001",
+        "text": "Card number: 4111 1111 1111 1111, expiry 08/27, SSN 123 45 6789.",
+        "false_positives": [
+          {
+            "type": "AADHAAR_LIKE",
+            "text": "4111 1111 1111 1111",
+            "start": 13,
+            "end": 32
+          },
+          {
+            "type": "ADDRESS",
+            "text": "SS",
+            "start": 48,
+            "end": 50
+          },
+          {
+            "type": "ADDRESS",
+            "text": "45",
+            "start": 56,
+            "end": 58
+          },
+          {
+            "type": "AADHAAR_LIKE",
+            "text": "67",
+            "start": 59,
+            "end": 61
+          },
+          {
+            "type": "ADDRESS",
+            "text": "89",
+            "start": 61,
+            "end": 63
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "CREDIT_CARD",
+            "text": "4111 1111 1111 1111",
+            "start": 13,
+            "end": 32
+          },
+          {
+            "type": "SSN",
+            "text": "123 45 6789",
+            "start": 52,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "india_001",
+        "text": "My PAN is ABCDE1234F and Aadhaar number is 1234 5678 9012.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN",
+            "start": 3,
+            "end": 6
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Aadhaar",
+            "start": 25,
+            "end": 32
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "india_002",
+        "text": "Send the offer letter to Kavya Reddy at Flat 302, Prestige Towers, Hyderabad, and cc her manager Suresh.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "Flat 302",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Prestige Towers,",
+            "start": 50,
+            "end": 66
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Hyderabad",
+            "start": 67,
+            "end": 76
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "Flat 302, Prestige Towers, Hyderabad",
+            "start": 40,
+            "end": 76
+          }
+        ]
+      },
+      {
+        "id": "negative_002",
+        "text": "Please summarize the key findings from the attached research paper on climate change.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "climate",
+            "start": 70,
+            "end": 77
+          },
+          {
+            "type": "MEDICAL_CONDITION",
+            "text": "change",
+            "start": 78,
+            "end": 84
+          }
+        ],
+        "false_negatives": []
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_exact": {
+    "detector_name": "distilbert (synthetic dev, exact match)",
+    "mode": "exact",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.6691,
+      "recall": 0.843,
+      "f1": 0.7461
+    },
+    "per_type": {
+      "AADHAAR_LIKE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "ADDRESS": {
+        "precision": 0.0035,
+        "recall": 0.0156,
+        "f1": 0.0057,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 0.9608,
+        "recall": 0.9608,
+        "f1": 0.9608,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 0.9464,
+        "recall": 1.0,
+        "f1": 0.9725,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.343,
+        "recall": 0.3966,
+        "f1": 0.3679,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 0.2593,
+        "recall": 0.2222,
+        "f1": 0.2393,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.8192,
+        "recall": 0.9799,
+        "f1": 0.8924,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.6715,
+        "recall": 0.748,
+        "f1": 0.7077,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 0.8205,
+        "recall": 1.0,
+        "f1": 0.9014,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 0.9857,
+        "recall": 1.0,
+        "f1": 0.9928,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.03253,
+      "p50": 0.03091,
+      "p95": 0.05172,
+      "p99": 0.06636,
+      "max": 0.14385
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0004",
+        "text": "SSN on file: 219-65-4346, associated with applicant James House.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Jefferson",
+            "start": 34,
+            "end": 43
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0012",
+        "text": "For verification, Beth Williams provided PAN YNICP0805H and phone 377-275-2047x1167.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN",
+            "start": 41,
+            "end": 44
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Y",
+            "start": 45,
+            "end": 46
+          },
+          {
+            "type": "PAN_NUMBER",
+            "text": "NICP0805H",
+            "start": 46,
+            "end": 55
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PAN_NUMBER",
+            "text": "YNICP0805H",
+            "start": 45,
+            "end": 55
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0014",
+        "text": "Matthew Moon and Kevin Walters are co-leading the Wilson-Barton migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton migration",
+            "start": 50,
+            "end": 73
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton",
+            "start": 50,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0020",
+        "text": "For verification, Christopher Williams provided PAN YUWDO2400K and phone 001-917-283-9084.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN YU",
+            "start": 48,
+            "end": 54
+          },
+          {
+            "type": "PAN_NUMBER",
+            "text": "WDO2400",
+            "start": 54,
+            "end": 61
+          },
+          {
+            "type": "ADDRESS",
+            "text": "K",
+            "start": 61,
+            "end": 62
+          },
+          {
+            "type": "ADDRESS",
+            "text": "001-",
+            "start": 73,
+            "end": 77
+          },
+          {
+            "type": "PHONE_NUMBER",
+            "text": "917",
+            "start": 77,
+            "end": 80
+          },
+          {
+            "type": "ADDRESS",
+            "text": "-283-9084",
+            "start": 80,
+            "end": 89
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PAN_NUMBER",
+            "text": "YUWDO2400K",
+            "start": 52,
+            "end": 62
+          },
+          {
+            "type": "PHONE_NUMBER",
+            "text": "001-917-283-9084",
+            "start": 73,
+            "end": 89
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0021",
+        "text": "For verification, Christian Leblanc provided PAN IASVY0974Y and phone +1-809-288-5165.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "IA",
+            "start": 49,
+            "end": 51
+          },
+          {
+            "type": "ADDRESS",
+            "text": "S",
+            "start": 51,
+            "end": 52
+          },
+          {
+            "type": "PAN_NUMBER",
+            "text": "VY0974Y",
+            "start": 52,
+            "end": 59
+          },
+          {
+            "type": "ADDRESS",
+            "text": "+1-809-288-5165",
+            "start": 70,
+            "end": 85
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PAN_NUMBER",
+            "text": "IASVY0974Y",
+            "start": 49,
+            "end": 59
+          },
+          {
+            "type": "PHONE_NUMBER",
+            "text": "+1-809-288-5165",
+            "start": 70,
+            "end": 85
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0022",
+        "text": "Shipping to 49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439, attention Joseph Bennett.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "49784 Jeffrey Rapid Apt. 034",
+            "start": 12,
+            "end": 40
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Port Derrick, KS 38439",
+            "start": 42,
+            "end": 64
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ADDRESS",
+            "text": "49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439",
+            "start": 12,
+            "end": 64
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0023",
+        "text": "The meeting notes mention Morgan, Cook and Jackson's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Morgan",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Cook",
+            "start": 34,
+            "end": 38
+          },
+          {
+            "type": "PERSON",
+            "text": "Jackson",
+            "start": 43,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Morgan, Cook and Jackson",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0025",
+        "text": "SSN on file: 473-99-4617, associated with applicant Matthew Bates.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_partial": {
+    "detector_name": "distilbert (synthetic dev, partial match)",
+    "mode": "partial",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.7568,
+      "recall": 0.9535,
+      "f1": 0.8438
+    },
+    "per_type": {
+      "AADHAAR_LIKE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "ADDRESS": {
+        "precision": 0.223,
+        "recall": 1.0,
+        "f1": 0.3647,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 0.9464,
+        "recall": 1.0,
+        "f1": 0.9725,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.599,
+        "recall": 0.6927,
+        "f1": 0.6425,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 0.9444,
+        "recall": 0.8095,
+        "f1": 0.8718,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.83,
+        "recall": 0.9929,
+        "f1": 0.9042,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.8467,
+        "recall": 0.9431,
+        "f1": 0.8923,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 0.8205,
+        "recall": 1.0,
+        "f1": 0.9014,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 0.9857,
+        "recall": 1.0,
+        "f1": 0.9928,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.02548,
+      "p50": 0.0229,
+      "p95": 0.04132,
+      "p99": 0.05462,
+      "max": 0.07175
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0004",
+        "text": "SSN on file: 219-65-4346, associated with applicant James House.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Jefferson",
+            "start": 34,
+            "end": 43
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0012",
+        "text": "For verification, Beth Williams provided PAN YNICP0805H and phone 377-275-2047x1167.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN",
+            "start": 41,
+            "end": 44
+          },
+          {
+            "type": "ADDRESS",
+            "text": "Y",
+            "start": 45,
+            "end": 46
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0020",
+        "text": "For verification, Christopher Williams provided PAN YUWDO2400K and phone 001-917-283-9084.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN YU",
+            "start": 48,
+            "end": 54
+          },
+          {
+            "type": "ADDRESS",
+            "text": "K",
+            "start": 61,
+            "end": 62
+          },
+          {
+            "type": "ADDRESS",
+            "text": "001-",
+            "start": 73,
+            "end": 77
+          },
+          {
+            "type": "ADDRESS",
+            "text": "-283-9084",
+            "start": 80,
+            "end": 89
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0021",
+        "text": "For verification, Christian Leblanc provided PAN IASVY0974Y and phone +1-809-288-5165.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "IA",
+            "start": 49,
+            "end": 51
+          },
+          {
+            "type": "ADDRESS",
+            "text": "S",
+            "start": 51,
+            "end": 52
+          },
+          {
+            "type": "ADDRESS",
+            "text": "+1-809-288-5165",
+            "start": 70,
+            "end": 85
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "+1-809-288-5165",
+            "start": 70,
+            "end": 85
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0022",
+        "text": "Shipping to 49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439, attention Joseph Bennett.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "Port Derrick, KS 38439",
+            "start": 42,
+            "end": 64
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0023",
+        "text": "The meeting notes mention Morgan, Cook and Jackson's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Morgan",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Cook",
+            "start": 34,
+            "end": 38
+          },
+          {
+            "type": "PERSON",
+            "text": "Jackson",
+            "start": 43,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Morgan, Cook and Jackson",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0025",
+        "text": "SSN on file: 473-99-4617, associated with applicant Matthew Bates.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "synth_42_0027",
+        "text": "Ricardo Young and David Fowler are co-leading the Butler, Beck and Miller migration project.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Beck",
+            "start": 58,
+            "end": 62
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Miller",
+            "start": 67,
+            "end": 73
+          },
+          {
+            "type": "PROJECT_CODENAME",
+            "text": "migration",
+            "start": 74,
+            "end": 83
+          }
+        ],
+        "false_negatives": []
+      }
+    ],
+    "run_errors": []
+  }
+}

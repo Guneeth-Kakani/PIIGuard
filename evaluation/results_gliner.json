@@ -1,0 +1,1041 @@
+{
+  "diagnostic": {
+    "detector_name": "gliner (diagnostic set)",
+    "mode": "exact",
+    "num_cases": 16,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.3667,
+      "recall": 0.3438,
+      "f1": 0.3548
+    },
+    "per_type": {
+      "AADHAAR_LIKE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "API_KEY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "CREDIT_CARD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "EMAIL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "IP_ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "ORGANIZATION": {
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "support": 1
+      },
+      "PAN_NUMBER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "PERSON": {
+        "precision": 0.75,
+        "recall": 0.6923,
+        "f1": 0.72,
+        "support": 13
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "PROJECT_CODENAME": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "support": 1
+      },
+      "SSN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.92228,
+      "p50": 0.28062,
+      "p95": 10.75095,
+      "p99": 10.75095,
+      "max": 10.75095
+    },
+    "failures_sample": [
+      {
+        "id": "clean_001",
+        "text": "Please contact John Smith regarding the account.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "account",
+            "start": 40,
+            "end": 47
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "clean_002",
+        "text": "You can reach me at priya.sharma@techcorp.com for any questions.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "priya.sharma@techcorp.com",
+            "start": 20,
+            "end": 45
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "EMAIL",
+            "text": "priya.sharma@techcorp.com",
+            "start": 20,
+            "end": 45
+          }
+        ]
+      },
+      {
+        "id": "multi_001",
+        "text": "Rahul Verma's phone number is +91-98765-43210 and his email is rahul.v@company.in.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "+91-98765-43210",
+            "start": 30,
+            "end": 45
+          },
+          {
+            "type": "ADDRESS",
+            "text": "email",
+            "start": 54,
+            "end": 59
+          },
+          {
+            "type": "ADDRESS",
+            "text": "rahul.v@company.in.",
+            "start": 63,
+            "end": 82
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "+91-98765-43210",
+            "start": 30,
+            "end": 45
+          },
+          {
+            "type": "EMAIL",
+            "text": "rahul.v@company.in",
+            "start": 63,
+            "end": 81
+          }
+        ]
+      },
+      {
+        "id": "multi_002",
+        "text": "Dr. Anjali Mehta prescribed metformin for Rohan's type 2 diabetes at Apollo Hospital.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Dr. Anjali Mehta",
+            "start": 0,
+            "end": 16
+          },
+          {
+            "type": "MEDICAL_CONDITION",
+            "text": "Rohan's type 2 diabetes",
+            "start": 42,
+            "end": 65
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "Anjali Mehta",
+            "start": 4,
+            "end": 16
+          },
+          {
+            "type": "PERSON",
+            "text": "Rohan",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "type": "MEDICAL_CONDITION",
+            "text": "type 2 diabetes",
+            "start": 50,
+            "end": 65
+          }
+        ]
+      },
+      {
+        "id": "code_001",
+        "text": "Here's my config:\napi_key = \"sk-ant-a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6\"\nemail = \"dev@startup.io\"",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "dev@startup.io",
+            "start": 79,
+            "end": 93
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "API_KEY",
+            "text": "sk-ant-a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6",
+            "start": 29,
+            "end": 68
+          },
+          {
+            "type": "EMAIL",
+            "text": "dev@startup.io",
+            "start": 79,
+            "end": 93
+          }
+        ]
+      },
+      {
+        "id": "code_002",
+        "text": "curl -H 'Authorization: Bearer AKIAIOSFODNN7EXAMPLE' https://api.internal.com/users?ip=192.168.1.45",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "192.168.1.45",
+            "start": 87,
+            "end": 99
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "API_KEY",
+            "text": "AKIAIOSFODNN7EXAMPLE",
+            "start": 31,
+            "end": 51
+          },
+          {
+            "type": "IP_ADDRESS",
+            "text": "192.168.1.45",
+            "start": 87,
+            "end": 99
+          }
+        ]
+      },
+      {
+        "id": "ambig_001",
+        "text": "Grace decided to say grace before the meal with Will and Rose.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "grace",
+            "start": 21,
+            "end": 26
+          }
+        ],
+        "false_negatives": []
+      },
+      {
+        "id": "ambig_002",
+        "text": "May will join the June project after March completes her review.",
+        "false_positives": [
+          {
+            "type": "PROJECT_CODENAME",
+            "text": "June project",
+            "start": 18,
+            "end": 30
+          },
+          {
+            "type": "ADDRESS",
+            "text": "March",
+            "start": 37,
+            "end": 42
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PERSON",
+            "text": "May",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "type": "PERSON",
+            "text": "March",
+            "start": 37,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "id": "structured_001",
+        "text": "Card number: 4111 1111 1111 1111, expiry 08/27, SSN 123 45 6789.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 48,
+            "end": 51
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "CREDIT_CARD",
+            "text": "4111 1111 1111 1111",
+            "start": 13,
+            "end": 32
+          },
+          {
+            "type": "SSN",
+            "text": "123 45 6789",
+            "start": 52,
+            "end": 63
+          }
+        ]
+      },
+      {
+        "id": "structured_002",
+        "text": "Call me at 98765 43210 or on my landline 040-2345-6789.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "98765 43210",
+            "start": 11,
+            "end": 22
+          },
+          {
+            "type": "ADDRESS",
+            "text": "040-2345-6789",
+            "start": 41,
+            "end": 54
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "98765 43210",
+            "start": 11,
+            "end": 22
+          },
+          {
+            "type": "PHONE_NUMBER",
+            "text": "040-2345-6789",
+            "start": 41,
+            "end": 54
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_exact": {
+    "detector_name": "gliner (synthetic dev, exact match)",
+    "mode": "exact",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.621,
+      "recall": 0.6145,
+      "f1": 0.6178
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.0929,
+        "recall": 0.6719,
+        "f1": 0.1632,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 0.9778,
+        "recall": 1.0,
+        "f1": 0.9888,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.5029,
+        "recall": 0.4916,
+        "f1": 0.4972,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.9049,
+        "recall": 0.9669,
+        "f1": 0.9349,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 0.5565,
+        "recall": 1.0,
+        "f1": 0.7151,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.26947,
+      "p50": 0.26295,
+      "p95": 0.36498,
+      "p99": 0.44476,
+      "max": 0.72812
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0002",
+        "text": "Ticket #4521: Aaron Bowen reported an issue, contact via harrellkenneth@example.net.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "harrellkenneth@example.net",
+            "start": 57,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "EMAIL",
+            "text": "harrellkenneth@example.net",
+            "start": 57,
+            "end": 83
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0003",
+        "text": "George Chapman called from 983-547-3829 regarding the Aguirre-Lee account.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "983-547-3829",
+            "start": 27,
+            "end": 39
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Aguirre-Lee account",
+            "start": 54,
+            "end": 73
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "983-547-3829",
+            "start": 27,
+            "end": 39
+          },
+          {
+            "type": "ORGANIZATION",
+            "text": "Aguirre-Lee",
+            "start": 54,
+            "end": 65
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0004",
+        "text": "SSN on file: 219-65-4346, associated with applicant James House.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "SSN",
+            "text": "219-65-4346",
+            "start": 13,
+            "end": 24
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0007",
+        "text": "Ticket #4521: Andrew Graham reported an issue, contact via michaeljones@example.net.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "michaeljones@example.net",
+            "start": 59,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "EMAIL",
+            "text": "michaeljones@example.net",
+            "start": 59,
+            "end": 83
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0009",
+        "text": "api_key = \"AKIAYLTZ9ATSN1U322N6\"  # do not commit this, Lauren Dominguez",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "AKIAYLTZ9ATSN1U322N6",
+            "start": 11,
+            "end": 31
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "API_KEY",
+            "text": "AKIAYLTZ9ATSN1U322N6",
+            "start": 11,
+            "end": 31
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Jefferson",
+            "start": 34,
+            "end": 43
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0012",
+        "text": "For verification, Beth Williams provided PAN YNICP0805H and phone 377-275-2047x1167.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN YNICP0805H",
+            "start": 41,
+            "end": 55
+          },
+          {
+            "type": "ADDRESS",
+            "text": "377-275-2047x1167",
+            "start": 66,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PAN_NUMBER",
+            "text": "YNICP0805H",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "type": "PHONE_NUMBER",
+            "text": "377-275-2047x1167",
+            "start": 66,
+            "end": 83
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0013",
+        "text": "Server log: request from 184.3.3.141 authenticated as Deborah Miller.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "184.3.3.141",
+            "start": 25,
+            "end": 36
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "IP_ADDRESS",
+            "text": "184.3.3.141",
+            "start": 25,
+            "end": 36
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0014",
+        "text": "Matthew Moon and Kevin Walters are co-leading the Wilson-Barton migration project.",
+        "false_positives": [
+          {
+            "type": "PROJECT_CODENAME",
+            "text": "Wilson-Barton migration project",
+            "start": 50,
+            "end": 81
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton",
+            "start": 50,
+            "end": 63
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  },
+  "synthetic_dev_partial": {
+    "detector_name": "gliner (synthetic dev, partial match)",
+    "mode": "partial",
+    "num_cases": 800,
+    "num_failures_to_run": 0,
+    "overall": {
+      "precision": 0.6369,
+      "recall": 0.6302,
+      "f1": 0.6335
+    },
+    "per_type": {
+      "ADDRESS": {
+        "precision": 0.1102,
+        "recall": 0.7969,
+        "f1": 0.1935,
+        "support": 64
+      },
+      "API_KEY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 62
+      },
+      "CREDIT_CARD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 51
+      },
+      "EMAIL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 102
+      },
+      "IP_ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 53
+      },
+      "MEDICAL_CONDITION": {
+        "precision": 0.9778,
+        "recall": 1.0,
+        "f1": 0.9888,
+        "support": 44
+      },
+      "ORGANIZATION": {
+        "precision": 0.5829,
+        "recall": 0.5698,
+        "f1": 0.5763,
+        "support": 179
+      },
+      "PAN_NUMBER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 63
+      },
+      "PERSON": {
+        "precision": 0.9104,
+        "recall": 0.9728,
+        "f1": 0.9406,
+        "support": 846
+      },
+      "PHONE_NUMBER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 123
+      },
+      "PROJECT_CODENAME": {
+        "precision": 0.5565,
+        "recall": 1.0,
+        "f1": 0.7151,
+        "support": 64
+      },
+      "SSN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 69
+      }
+    },
+    "latency_seconds": {
+      "mean": 0.27035,
+      "p50": 0.26146,
+      "p95": 0.33622,
+      "p99": 0.37759,
+      "max": 0.44747
+    },
+    "failures_sample": [
+      {
+        "id": "synth_42_0000",
+        "text": "The meeting notes mention Ramirez, Booth and Blake's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Ramirez",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "type": "PERSON",
+            "text": "Booth",
+            "start": 35,
+            "end": 40
+          },
+          {
+            "type": "PERSON",
+            "text": "Blake",
+            "start": 45,
+            "end": 50
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Ramirez, Booth and Blake",
+            "start": 26,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0002",
+        "text": "Ticket #4521: Aaron Bowen reported an issue, contact via harrellkenneth@example.net.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "harrellkenneth@example.net",
+            "start": 57,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "EMAIL",
+            "text": "harrellkenneth@example.net",
+            "start": 57,
+            "end": 83
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0003",
+        "text": "George Chapman called from 983-547-3829 regarding the Aguirre-Lee account.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "983-547-3829",
+            "start": 27,
+            "end": 39
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PHONE_NUMBER",
+            "text": "983-547-3829",
+            "start": 27,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0004",
+        "text": "SSN on file: 219-65-4346, associated with applicant James House.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "SSN",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "SSN",
+            "text": "219-65-4346",
+            "start": 13,
+            "end": 24
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0007",
+        "text": "Ticket #4521: Andrew Graham reported an issue, contact via michaeljones@example.net.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "michaeljones@example.net",
+            "start": 59,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "EMAIL",
+            "text": "michaeljones@example.net",
+            "start": 59,
+            "end": 83
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0009",
+        "text": "api_key = \"AKIAYLTZ9ATSN1U322N6\"  # do not commit this, Lauren Dominguez",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "AKIAYLTZ9ATSN1U322N6",
+            "start": 11,
+            "end": 31
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "API_KEY",
+            "text": "AKIAYLTZ9ATSN1U322N6",
+            "start": 11,
+            "end": 31
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0010",
+        "text": "The meeting notes mention Barton, Jefferson and Burke's Q3 targets but no personal data at all.",
+        "false_positives": [
+          {
+            "type": "PERSON",
+            "text": "Barton",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "type": "PERSON",
+            "text": "Jefferson",
+            "start": 34,
+            "end": 43
+          },
+          {
+            "type": "PERSON",
+            "text": "Burke",
+            "start": 48,
+            "end": 53
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Barton, Jefferson and Burke",
+            "start": 26,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0012",
+        "text": "For verification, Beth Williams provided PAN YNICP0805H and phone 377-275-2047x1167.",
+        "false_positives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "PAN YNICP0805H",
+            "start": 41,
+            "end": 55
+          },
+          {
+            "type": "ADDRESS",
+            "text": "377-275-2047x1167",
+            "start": 66,
+            "end": 83
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "PAN_NUMBER",
+            "text": "YNICP0805H",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "type": "PHONE_NUMBER",
+            "text": "377-275-2047x1167",
+            "start": 66,
+            "end": 83
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0013",
+        "text": "Server log: request from 184.3.3.141 authenticated as Deborah Miller.",
+        "false_positives": [
+          {
+            "type": "ADDRESS",
+            "text": "184.3.3.141",
+            "start": 25,
+            "end": 36
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "IP_ADDRESS",
+            "text": "184.3.3.141",
+            "start": 25,
+            "end": 36
+          }
+        ]
+      },
+      {
+        "id": "synth_42_0014",
+        "text": "Matthew Moon and Kevin Walters are co-leading the Wilson-Barton migration project.",
+        "false_positives": [
+          {
+            "type": "PROJECT_CODENAME",
+            "text": "Wilson-Barton migration project",
+            "start": 50,
+            "end": 81
+          }
+        ],
+        "false_negatives": [
+          {
+            "type": "ORGANIZATION",
+            "text": "Wilson-Barton",
+            "start": 50,
+            "end": 63
+          }
+        ]
+      }
+    ],
+    "run_errors": []
+  }
+}
